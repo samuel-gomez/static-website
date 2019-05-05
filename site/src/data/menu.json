@@ -1,0 +1,32 @@
+{
+  "menuFr": [
+    {
+      "label": "Main",
+      "childsmenu": [
+        {
+          "href": "/",
+          "label": "Accueil"
+        },
+        {
+          "href": "/demarrer",
+          "label": "Démarrer"
+        }
+      ]
+    }
+  ],
+  "menuEn": [
+    {
+      "label": "Main",
+      "childsmenu": [
+        {
+          "href": "/",
+          "label": "Home"
+        },
+        {
+          "href": "/get-started",
+          "label": "Get started"
+        }
+      ]
+    }
+  ]
+}

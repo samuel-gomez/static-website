@@ -1,0 +1,4 @@
+mixin Translate({translations})
+    each item, key in translations
+        a(href=`/${key}/${item}`)
+            | #{key}

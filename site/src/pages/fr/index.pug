@@ -1,0 +1,15 @@
+extends ../../commons/layout
+
+append vars
+    include home/partials/_vars
+
+block meta
+    include home/partials/_meta
+
+block headerlinks
+    +Translate({translations})
+
+block menu
+    +Menu({})
+block content
+    | hello french
