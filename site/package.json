@@ -24,8 +24,6 @@
   },
   "homepage": "https://github.com/samuel-gomez-axa/gulp-seed#readme",
   "devDependencies": {
-    "@axa-fr/react-toolkit-all": "^1.2.2",
-    "@axa-fr/react-toolkit-core": "^1.2.2",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
