@@ -8,7 +8,7 @@
     "start": "lerna run start --stream",
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
-    "install": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap",
     "publish": "lerna publish"
   },
   "author": "",

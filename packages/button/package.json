@@ -13,5 +13,6 @@
   },
   "peerDependencies": {
     "pug": "^2.0.3"
-  }
+  },
+  "gitHead": "89dcb16cbaf508ad1b43b453e445c62ecbdcfe6a"
 }
