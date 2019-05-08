@@ -1,6 +1,4 @@
 {
-  "prefix": "tk",
-  "prefixjs": "js",
   "baseurl": "https://static-design-system.netlify.com/",
   "pathImg": "./assets/images/",
   "pathFavicons": "./assets/favicons/",

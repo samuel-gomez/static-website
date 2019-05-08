@@ -1,0 +1,15 @@
+extends ../../../../commons/layout
+
+append vars
+    include partials/_vars
+
+block meta
+    include partials/_meta
+
+block headerlinks
+    +Translate({translations})
+
+block menu
+    +Menu({})
+block content
+    | mon premier article 

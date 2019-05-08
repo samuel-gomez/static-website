@@ -1,6 +1,6 @@
-import setModifier from './setModifier';
+import { prefix, prefixjs } from '@wooweb/core/config.json';
 
-const { prefix, prefixjs } = require('../../data/base');
+import setModifier from './setModifier';
 
 export default (block, modifier, js = false) => {
   let classComponent = `${prefix}-${block}`;

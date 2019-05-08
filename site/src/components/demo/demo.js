@@ -1,5 +1,6 @@
+import { prefix, prefixjs } from '@wooweb/core/config.json';
+
 import $$ from '../../commons/js/selectorAll';
-import { prefix, prefixjs } from '../../data/base.json';
 
 const classJsOpen = `${prefixjs}-icon--demo-open`;
 const classJsClose = `${prefixjs}-icon--demo-close`;

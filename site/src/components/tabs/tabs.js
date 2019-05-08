@@ -1,6 +1,6 @@
+import { prefix, prefixjs } from '@wooweb/core/config.json';
 import $$ from '../../commons/js/selectorAll';
 import $ from '../../commons/js/selector';
-import { prefix, prefixjs } from '../../data/base.json';
 
 const classJsItemTabs = `${prefixjs}-tabs__nav-item`;
 const activeModifier = 'active';

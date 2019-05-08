@@ -1,11 +1,11 @@
 {
-  "author": "Axaguildev",
-  "title": "Axaguildev OpenSource Axa at Lille, France",
+  "author": "Samuel Gomez",
+  "title": "Samuel Gomez OpenSource Axa at Lille, France",
   "geography": "Lille, France, 59000",
   "lang": "fr",
-  "email": "samuel.gomez@axa.fr",
-  "copyright": "2018 Axaguildev",
-  "description": "Axaguildev OpenSource Axa Front-End et Back-end, Nodejs React à Lille.",
-  "keywords": "Axaguildev, Open Source,Open source Axa, Axa France",
+  "email": "contact@samuelgomez.fr",
+  "copyright": "2019 Samuel Gomez",
+  "description": "Samuel Gomez OpenSource Front-End et Back-end, Nodejs React à Lille.",
+  "keywords": "Samuel Gomez, Open Source,Open source Samuel Gomez, Samuel Gomez France",
   "avatar": "assets/images/axa.svg"
 }

@@ -1,5 +1,5 @@
 import $ from '../../commons/js/selector';
-import { prefix, prefixjs } from '../../data/base.json';
+import { prefix, prefixjs } from '@wooweb/core/config.json';
 
 const classBtnOpen = `${prefixjs}-icon--open`;
 const classBtnClose = `${prefixjs}-icon--close`;

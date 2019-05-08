@@ -1,4 +1,4 @@
-const { prefix, prefixjs } = require('../../data/base');
+import { prefix, prefixjs } from '@wooweb/core/config.json';
 
 export default (block, active, index) => {
   const baseClass = `${prefix}-${block}`;
