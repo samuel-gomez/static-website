@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/core",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Wooweb Core",
   "private": false,
   "scripts": {
