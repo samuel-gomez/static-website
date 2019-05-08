@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/button",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "Wooweb Button component",
   "private": false,
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Samuel Gomez",
   "license": "MIT",
   "dependencies": {
-    "@wooweb/core": "^0.0.0"
+    "@wooweb/core": "^1.0.1"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
