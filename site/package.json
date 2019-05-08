@@ -3,7 +3,10 @@
   "version": "1.0.5",
   "description": "Static Website generator",
   "private": true,
-  "main": "index.js",
+  "files": [
+    "dist/"
+  ],
+  "main": "dist/index.js",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
