@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
+$color-axa: red;
+@import '@wooweb/core/variables';
+
 @import './commons/scss/font-face';
-@import './commons/scss/variables';
+//@import './commons/scss/variables';
 
 /* Import Normalize ******************************/
 
@@ -21,7 +24,8 @@
 @import './components/title/title';
 @import './components/icon/icon';
 @import './components/more/more';
-@import './components/buttonlink/buttonlink';
+//@import './components/buttonlink/buttonlink';
+@import '@wooweb/button/index';
 
 /* Molecules */
 

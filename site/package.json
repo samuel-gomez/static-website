@@ -1,7 +1,8 @@
 {
-  "name": "static-website-axaguildev",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@wooweb/static-website-sam",
+  "version": "0.0.0",
+  "description": "Static Website generator",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "start": "gulp dev",
@@ -15,15 +16,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AxaGuilDEv/static-website-axaguildev.git"
+    "url": "git+https://github.com/samuel-gomez.git"
   },
   "author": "Samuel Gomez",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AxaGuilDEv/static-website-axaguildev/issues"
+    "url": "https://github.com/samuel-gomez/issues"
   },
-  "homepage": "https://github.com/samuel-gomez-axa/gulp-seed#readme",
+  "homepage": "https://github.com/samuel-gomez#readme",
   "devDependencies": {
+    "@wooweb/core": "^0.0.0",
+    "@wooweb/button": "^0.0.0",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.4.4",

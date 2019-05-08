@@ -1,0 +1,17 @@
+{
+  "name": "@wooweb/button",
+  "version": "0.0.0",
+  "description": "Wooweb Button component",
+  "private": false,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Gomez",
+  "license": "MIT",
+  "dependencies": {
+    "@wooweb/core": "^0.0.0"
+  },
+  "peerDependencies": {
+    "pug": "^2.0.3"
+  }
+}
