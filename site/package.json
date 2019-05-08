@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/static-website-sam",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Static Website generator",
   "private": true,
   "main": "index.js",
@@ -34,8 +34,8 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.4",
-    "@wooweb/button": "^1.0.4",
-    "@wooweb/core": "^1.0.4",
+    "@wooweb/button": "^1.0.5",
+    "@wooweb/core": "^1.0.5",
     "babel-core": "^6.26.3",
     "babel-plugin-transform-imports": "^1.5.1",
     "babel-polyfill": "^6.26.0",
