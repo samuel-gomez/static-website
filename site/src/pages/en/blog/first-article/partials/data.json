@@ -1,3 +1,6 @@
 {
-  "title": "It's my first article"
+  "title": "It's my first article",
+  "description": "This is the description of my first article.",
+  "keywords": "",
+  "translations": { "fr": "blog/premier-article" }
 }

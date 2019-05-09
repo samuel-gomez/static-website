@@ -1,3 +1,6 @@
 {
-  "title": "c'est mon deuxième article de blog"
+  "title": "c'est mon deuxième article de blog",
+  "description": "Ceci est la description de mon deuxième article.",
+  "keywords": "",
+  "translations": { "en": "blog/second-article" }
 }

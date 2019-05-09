@@ -1,0 +1,21 @@
+
+extends ./_layout
+
+append vars
+    -basedir = `../${basedir}`
+    -var article = articles[lang].find(article => article.id === name)
+
+block meta
+    -var metaTitle = article.title
+    -var metaDescription = article.description
+    -var metaKeywords = article.keywords
+
+block headerlinks
+    +Translate({translations: article.translations})
+
+block menu
+    +Menu({activeLink: article.link})
+
+block content
+    div(class=`${prefix}-markdown`)
+        block markdown

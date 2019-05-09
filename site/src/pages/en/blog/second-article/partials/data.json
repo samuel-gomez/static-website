@@ -1,3 +1,6 @@
 {
-  "title": "It's my second article de blog"
+  "title": "It's my second article de blog",
+  "description": "This is the description of my second article.",
+  "keywords": "",
+  "translations": { "fr": "blog/deuxieme-article" }
 }
