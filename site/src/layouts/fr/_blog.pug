@@ -1,0 +1,16 @@
+extends ./_home
+
+append vars
+    -basedir = `../${basedir}`
+    -var page = pages[lang].find(page => page.id === 'blog')
+
+block meta
+    -var metaTitle = page.title
+    -var metaDescription = page.description
+    -var metaKeywords = page.keywords
+
+block headerlinks
+    +Translate({translations:page.translations})
+
+block menu
+    +Menu({activePath: '/blog'})

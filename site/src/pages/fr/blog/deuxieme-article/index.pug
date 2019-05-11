@@ -1,15 +1,7 @@
-extends ../../../../commons/layout
+extends ../../../../layouts/fr/_post
 
-append vars
-    include partials/_vars
+append name
+    -var name = "deuxieme-article"
 
-block meta
-    include partials/_meta
-
-block headerlinks
-    +Translate({translations})
-
-block menu
-    +Menu({})
-block content
-    | mon deuxieme article 
+block markdown
+    include:markdown-it ./content.md

@@ -1,18 +1,8 @@
-extends ../../../commons/layout
+extends ../../../layouts/fr/_blog
 
-append vars
-    include partials/_vars
-
-block meta
-    include partials/_meta
-
-block headerlinks
-    +Translate({translations})
-
-block menu
-    +Menu({})
 block content
-    h1 mon Blog 2
+    h1 mon Blog en français
     each article in articles[lang]
-        h2 #{article.title}
-            a(href=article.link) read more >
+        h2.af_title #{article.title}
+        +ButtonLink({ label: 'En savoir plus >', href: article.link})
+            

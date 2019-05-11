@@ -2,11 +2,10 @@
 import { src, dest } from 'gulp';
 import pugg from 'pug';
 import pretty from 'pretty';
+import { join } from 'path';
 import pug from 'gulp-pug';
-import debug from 'gulp-debug';
 import plumber from 'gulp-plumber';
-import fs from 'fs';
-import path from 'path';
+import { lstatSync, readdirSync, readFileSync } from 'fs';
 import fetch from 'node-fetch';
 import configCore from '@wooweb/core/config.json';
 import { reload } from './serve';
@@ -23,20 +22,18 @@ const baseData = './src/data/';
 
 const languages = ['fr', 'en'];
 
-const getFileData = fileName => JSON.parse(fs.readFileSync(`${baseData}${fileName}.json`));
+const getFileData = fileName => JSON.parse(readFileSync(`${baseData}${fileName}.json`));
 
-const getFolders = lang => {
-  const all = fs.readdirSync(`src/pages/${lang}/blog`);
-  const folders = all.filter(
-    folder =>
-      folder !== 'partials' &&
-      folder !== '_layout.pug' &&
-      folder !== '_post.pug' &&
-      folder !== 'index.pug',
+const isDirectory = source => lstatSync(source).isDirectory();
+const getDirectories = source =>
+  readdirSync(source).filter(
+    folder => isDirectory(join(source, folder)) && folder !== 'partials' && folder !== 'home',
   );
+
+const getData = (lang, folders, sub = '') => {
   const articles = [];
   folders.forEach(folder => {
-    const article = require(`../src/pages/${lang}/blog/${folder}/partials/data.json`);
+    const article = require(`../src/pages/${lang}${sub}/${folder}/data.json`);
     article.link = `./${folder}`;
     article.id = folder;
     articles.push(article);
@@ -49,8 +46,12 @@ const pugTsk = () => {
   const general = getFileData('general');
   const menu = getFileData('menu');
   const articles = [];
+  const pages = [];
   languages.forEach(lang => {
-    articles[lang] = getFolders(lang);
+    const foldersBlog = getDirectories(`src/pages/${lang}/blog`);
+    articles[lang] = getData(lang, foldersBlog, '/blog');
+    const foldersPage = getDirectories(`src/pages/${lang}`);
+    pages[lang] = getData(lang, foldersPage);
   });
 
   const data = {
@@ -61,7 +62,7 @@ const pugTsk = () => {
     functions: { setClass, setClassActive, pugg, pretty },
     require,
     articles,
-    mypath: path.resolve(),
+    pages,
   };
 
   return (

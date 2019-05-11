@@ -1,0 +1,10 @@
+extends ./_home
+
+append vars
+    -basedir = `../${basedir}`
+
+block headerlinks
+    +Translate({translations})
+
+block menu
+    +Menu({activePath: '/blog'})

@@ -1,5 +1,5 @@
 
-extends ./_layout
+extends ./_blog
 
 append vars
     -basedir = `../${basedir}`
@@ -14,7 +14,7 @@ block headerlinks
     +Translate({translations: article.translations})
 
 block menu
-    +Menu({activeLink: article.link})
+    +Menu({activePath: article.link})
 
 block content
     div(class=`${prefix}-markdown`)

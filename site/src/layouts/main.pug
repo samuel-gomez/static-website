@@ -35,9 +35,9 @@ doctype html
 html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
     head
         link(rel="canonical" href=baseurl)
-        include ./includes/meta
+        include ../includes/meta
         block meta
-        include ./includes/favicon.pug
+        include ../includes/favicon.pug
         meta(name="description" content=metaDescription || description)
         meta(name="keywords" content=metaKeywords || keywords)
         title
@@ -58,4 +58,4 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
         script(src=`${basedir}bundle.js`)
         block scriptPage
         block template
-        include ./includes/analytics.pug
+        include ../includes/analytics.pug

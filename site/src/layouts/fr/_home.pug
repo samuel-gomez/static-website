@@ -1,0 +1,11 @@
+extends ../main
+
+append vars
+    -var lang = "fr"
+    -basedir = `../${basedir}`
+
+block headerlinks
+    +Translate({translations})
+
+block menu
+    +Menu({})

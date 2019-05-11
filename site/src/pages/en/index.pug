@@ -1,4 +1,4 @@
-extends ./_layout
+extends ../../layouts/en/_home
 
 append vars
     include home/partials/_vars
@@ -6,10 +6,5 @@ append vars
 block meta
     include home/partials/_meta
 
-block headerlinks
-    +Translate({translations})
-
-block menu
-    +Menu({})
 block content
-    | hello english
+    | Home page english
