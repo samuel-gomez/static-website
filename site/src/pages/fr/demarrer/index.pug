@@ -1,22 +1,13 @@
-extends ../../../layouts/main
+extends ../../../layouts/fr/_blog
 
-append vars
-	include partials/_vars
-
-block meta
-	include partials/_meta
-
-block menu
-	+Menu({activePath: `/${lang}/${id}`})
-
-block headerlinks
-	+Translate({translations})
+append name
+    -var name = "demarrer"
 
 block page
-	include ../../../components/page/page-title
-		block page-title
-			include:markdown-it ./markdown/title.md
-	include ../../../components/page/page-content
-		block page-content
-			div(class=`${prefix}-markdown`)
-				include:markdown-it ./markdown/content.md
+    include ../../../components/page/page-title
+        block page-title
+            include:markdown-it ./title.md
+    include ../../../components/page/page-content
+        block page-content
+            div(class=`${prefix}-markdown`)
+                include:markdown-it ./content.md

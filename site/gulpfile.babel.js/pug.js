@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 /* eslint-disable arrow-parens */
 import { src, dest } from 'gulp';
 import pugg from 'pug';
@@ -30,12 +32,17 @@ const getDirectories = source =>
     folder => isDirectory(join(source, folder)) && folder !== 'partials' && folder !== 'home',
   );
 
+const getArticle = (path, folder = '') => {
+  const article = require(path);
+  article.link = `./${folder}`;
+  article.id = folder;
+  return article;
+};
+
 const getData = (lang, folders, sub = '') => {
   const articles = [];
   folders.forEach(folder => {
-    const article = require(`../src/pages/${lang}${sub}/${folder}/data.json`);
-    article.link = `./${folder}`;
-    article.id = folder;
+    const article = getArticle(`../src/pages/${lang}${sub}/${folder}/data.json`, folder);
     articles.push(article);
   });
   return articles;
@@ -48,10 +55,12 @@ const pugTsk = () => {
   const articles = [];
   const pages = [];
   languages.forEach(lang => {
-    const foldersBlog = getDirectories(`src/pages/${lang}/blog`);
-    articles[lang] = getData(lang, foldersBlog, '/blog');
-    const foldersPage = getDirectories(`src/pages/${lang}`);
-    pages[lang] = getData(lang, foldersPage);
+    const foldersBlog = getDirectories(`src/pages/${lang}/blog`); // get folders on '/blog' directory
+    articles[lang] = getData(lang, foldersBlog, '/blog'); // Loop on blog folders to get their data
+    const foldersPage = getDirectories(`src/pages/${lang}`); // get folders '/pages' directory (not children)
+    pages[lang] = getData(lang, foldersPage); // Loop on page folders to get their data
+    const homePage = getArticle(`../src/pages/${lang}/data.json`); // get home page data
+    pages[lang].push(homePage);
   });
 
   const data = {

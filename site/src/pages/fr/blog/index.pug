@@ -1,5 +1,8 @@
 extends ../../../layouts/fr/_blog
 
+append name
+    -var name = "blog"
+
 block content
     h1 mon Blog en français
     each article in articles[lang]

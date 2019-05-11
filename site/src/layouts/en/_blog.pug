@@ -2,9 +2,15 @@ extends ./_home
 
 append vars
     -basedir = `../${basedir}`
+    -var page = pages[lang].find(page => page.id === name)
+
+block meta
+    -var metaTitle = page.title
+    -var metaDescription = page.description
+    -var metaKeywords = page.keywords
 
 block headerlinks
-    +Translate({translations})
+    +Translate({translations:page.translations})
 
 block menu
-    +Menu({activePath: '/blog'})
+    +Menu({activePath: page.link})

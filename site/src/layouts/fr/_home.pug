@@ -3,9 +3,15 @@ extends ../main
 append vars
     -var lang = "fr"
     -basedir = `../${basedir}`
+    -var page = pages[lang].find(page => page.id === '')
+
+block meta
+    -var metaTitle = page.title
+    -var metaDescription = page.description
+    -var metaKeywords = page.keywords
 
 block headerlinks
-    +Translate({translations})
+    +Translate({translations:page.translations})
 
 block menu
-    +Menu({})
+    +Menu({activePath: page.link})
