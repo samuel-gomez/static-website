@@ -1,6 +1,15 @@
+# `Wooweb Button Pug Component`
+
+> Component for svg diplay
+
+## Usage
+
+```
 mixin Button({className=``, label, icon='', target="_self", modifier='', js=false, href})
     -const classComponent = `${setClass('btn', modifier, js)}`
     a(class=classComponent target=target href=href)
         if(icon !== '')
             +Icon({id:icon, className:`${prefix}-btn__icon`})
         span(class=`${prefix}-btn__text`) #{label}
+
+```

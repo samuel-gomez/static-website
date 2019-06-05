@@ -1,20 +1,20 @@
 {
-  "name": "@wooweb/button",
+  "name": "@wooweb/content",
   "version": "1.0.6",
-  "description": "Wooweb Button component",
+  "description": "Wooweb Content component",
   "private": false,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "button",
-    "link",
+    "content",
+    "layout",
     "component",
     "pug",
     "html"
   ],
-  "author": "samuel-gomez <contact@samuelgomez.fr>",
+  "author": "Samuel Gomez <contact@samuelgomez.fr>",
   "homepage": "https://github.com/samuel-gomez/static-website#readme",
   "license": "MIT",
   "repository": {

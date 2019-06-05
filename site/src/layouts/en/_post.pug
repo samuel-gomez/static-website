@@ -2,6 +2,7 @@
 extends ./_blog
 
 append vars
+    -var id = "post"
     -basedir = `../${basedir}`
     -var article = articles[lang].find(article => article.id === name)
 

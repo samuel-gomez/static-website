@@ -1,17 +1,18 @@
 {
-  "name": "@wooweb/button",
+  "name": "@wooweb/icon",
   "version": "1.0.6",
-  "description": "Wooweb Button component",
+  "description": "Wooweb Icon component for svg structure",
   "private": false,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "button",
-    "link",
+    "icon",
     "component",
     "pug",
+    "svg",
+    "sprite",
     "html"
   ],
   "author": "samuel-gomez <contact@samuelgomez.fr>",
@@ -22,17 +23,15 @@
     "url": "git+https://github.com/samuel-gomez/static-website.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.0.6",
-    "@wooweb/icon": "^1.0.6"
+    "@wooweb/core": "^1.0.6"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
-  },
-  "gitHead": "1ea3fabf048116a0664532114aa03c58a659c717"
+  }
 }

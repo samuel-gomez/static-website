@@ -3,11 +3,12 @@ extends ../../../layouts/en/_blog
 append name
     -var name = "get-started"
 
-block page
-    include ../../../components/page/page-title
-        block page-title
-            include:markdown-it ./title.md
-    include ../../../components/page/page-content
-        block page-content
-            div(class=`${prefix}-markdown`)
-                include:markdown-it ./content.md
+block content
+    include ../../../components/page/page
+        include ../../../components/page/page-title
+            block page-title
+                include:markdown-it ./title.md
+        include ../../../components/page/page-content
+            block page-content
+                div(class=`${prefix}-markdown`)
+                    include:markdown-it ./content.md

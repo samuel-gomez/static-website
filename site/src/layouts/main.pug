@@ -12,10 +12,13 @@ block functions
     -const {prefixjs, prefix, baseurl, pathImg, pathFavicons, storybookBaseUrl, githubBaseUrl, badgeBaseUrl} = base
     -const {menuFr,menuEn} = menu
 
-include ../components/icon/icon
-include ../components/title/title
-include ../components/logo/logo
-include ../components/img/img
+include ../../node_modules/@wooweb/icon/index
+include ../../node_modules/@wooweb/title/index
+include ../../node_modules/@wooweb/button/index
+include ../../node_modules/@wooweb/content/index
+include ../../node_modules/@wooweb/logo/index
+include ../../node_modules/@wooweb/img/index
+include ../../node_modules/@wooweb/header/index
 include ../components/more/more
 include ../components/repo/repo
 include ../components/menu/menu
@@ -23,7 +26,6 @@ include ../components/menu/menuitem
 include ../components/menu/submenu
 include ../components/introheader/introheader
 include ../components/encart/encart
-include ../../node_modules/@wooweb/button/index
 include ../components/pagelinks/pagelinks
 include ../components/tabs/tabs
 include ../components/tabs/tabs-nav-item
@@ -50,8 +52,8 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
     body(id=`${prefix}-${id}-body` class=`${prefix}-body`)
         block menu
         include ../components/header/header
-        include ../components/content/content
-            include ../components/page/page
+        +Content({modifier: id, js:true})
+            block content
         include ../components/footer/footer
         div(style="display:none")
             include ../assets/sprite/sprite.svg

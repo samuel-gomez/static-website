@@ -1,4 +1,2 @@
-header(class=`${prefix}-header`)
-  a(class=`${prefix}-header__name-link` href=basedir title="Retour à l'accueil")
-    +Logo({title:'Slash', subtitle:'Design System', img: "slash-logo.svg", modifier:"header"})
++Header({ basedir, pathImg, link: { href:basedir, title:"Retour à l'accueil"}, logo: { title:'Samuel Gomez', subtitle:'Design System', img: "slash-logo.svg", alt: 'slash design system', modifier:'header' } })
   block headerlinks

@@ -1,0 +1,7 @@
+@import '@wooweb/core/variables.scss';
+
+.#{$prefix} {
+  &-icon {
+    fill: $black;
+  }
+}

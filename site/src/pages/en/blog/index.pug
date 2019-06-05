@@ -4,7 +4,10 @@ append name
     -var name = "blog"
 
 block content
-    h1 my Blog page
+    h1.sg-title my Blog page
     each article in articles[lang]
-        h2 #{article.title}
-            a(href=article.link) read more >
+        -const {title,description,link} = article
+        article
+            a(href=link title=title)
+                h2.sg-title #{title}
+            p #{description}

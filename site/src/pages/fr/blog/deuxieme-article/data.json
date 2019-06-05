@@ -2,5 +2,7 @@
   "title": "c'est mon deuxième article de blog",
   "description": "Ceci est la description de mon deuxième article.",
   "keywords": "",
-  "translations": { "en": "blog/second-article" }
+  "translations": { "en": "blog/second-article" },
+  "created": "10-05-2019",
+  "modified": "11-05-2019"
 }

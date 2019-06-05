@@ -28,8 +28,15 @@
   },
   "homepage": "https://github.com/samuel-gomez#readme",
   "dependencies": {
+    "@babel/register": "^7.4.4",
     "@wooweb/button": "^1.0.6",
     "@wooweb/core": "^1.0.6",
+    "@wooweb/content": "^1.0.6",
+    "@wooweb/icon": "^1.0.6",
+    "@wooweb/title": "^1.0.6",
+    "@wooweb/header": "^1.0.6",
+    "@wooweb/logo": "^1.0.6",
+    "@wooweb/img": "^1.0.6",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
@@ -46,13 +53,12 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "gulplog": "^1.0.0",
-    "@babel/register": "^7.4.4",
     "hammerjs": "^2.0.8",
     "jstransformer-markdown-it": "^2.1.0",
     "lory.js": "^2.5.3",
+    "node-fetch": "^2.4.1",
     "normalize-scss": "^7.0.1",
-    "pretty": "^2.0.0",
-    "node-fetch": "^2.4.1"
+    "pretty": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

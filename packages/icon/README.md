@@ -1,0 +1,12 @@
+# `@wooweb/icon`
+
+> TODO: description
+
+## Usage
+
+```
+mixin Icon({id, modifier="", className='', js=false})
+	-const classComponent = `${setClass('icon', modifier, js)} ${className}`
+	svg(class=classComponent viewbox="0 0 36 36" width=36 height=36)
+		use(xlink:href=`#${id}`)
+```

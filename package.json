@@ -9,7 +9,11 @@
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "create": "lerna create",
+    "add": "lerna add",
+    "clean": "lerna clean",
+    "remove": "lerna exec -- npm remove"
   },
   "author": "",
   "license": "MIT",

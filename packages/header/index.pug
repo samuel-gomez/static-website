@@ -1,0 +1,6 @@
+mixin Header({modifier = '', js=false, link, logo, basedir, pathImg})
+	-const classComponent = setClass('header', modifier, js)
+	header(class=classComponent)
+		a(class=`${prefix}-header__name-link` href=link.href title=link.title)
+			+Logo({title:logo.title, subtitle:logo.subtitle, img: logo.img, basedir, pathImg, alt: logo.alt, modifier:logo.modifier})
+		block

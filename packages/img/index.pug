@@ -1,0 +1,3 @@
+mixin Img({src, alt='image', modifier = '', js=false})
+	-const classComponent = setClass('img', modifier, js)
+	img(class=classComponent src=src alt=alt)

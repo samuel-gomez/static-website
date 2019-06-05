@@ -1,0 +1,4 @@
+mixin Content({ modifier='', js=false })
+    -const classComponent = `${setClass('content', modifier, js)}`
+    main(class=classComponent)
+        block

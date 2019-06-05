@@ -1,7 +1,10 @@
 {
-  "packages": [
-    "packages/*",
-    "site"
-  ],
+  "packages": ["packages/*", "site"],
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "yes": true
+    }
+  },
   "version": "1.0.6"
 }

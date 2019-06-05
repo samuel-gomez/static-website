@@ -7,5 +7,4 @@ block content
     h1 mon Blog en français
     each article in articles[lang]
         h2.af_title #{article.title}
-        +ButtonLink({ label: 'En savoir plus >', href: article.link})
-            
+        +Button({ label: 'En savoir plus >', href: article.link})

@@ -1,7 +1,13 @@
+@import '@wooweb/core/variables.scss';
+
 .#{$prefix} {
   &-content {
     background: $color-alabaster;
     transition: all 0.5s ease;
+    min-height: calc(100vh - #{$header-height + $footer-height});
+    &--post {
+      padding: 2rem;
+    }
     &--opened {
       padding-left: $menu-width;
     }

@@ -1,20 +1,19 @@
 {
-  "name": "@wooweb/button",
+  "name": "@wooweb/title",
   "version": "1.0.6",
-  "description": "Wooweb Button component",
+  "description": "Wooweb Title component",
   "private": false,
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "button",
-    "link",
+    "title",
     "component",
     "pug",
     "html"
   ],
-  "author": "samuel-gomez <contact@samuelgomez.fr>",
+  "author": "Samuel Gomez <contact@samuelgomez.fr>",
   "homepage": "https://github.com/samuel-gomez/static-website#readme",
   "license": "MIT",
   "repository": {
@@ -28,8 +27,7 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.0.6",
-    "@wooweb/icon": "^1.0.6"
+    "@wooweb/core": "^1.0.6"
   },
   "peerDependencies": {
     "pug": "^2.0.3"

@@ -2,5 +2,7 @@
   "title": "It's my first article",
   "description": "This is the description of my first article.",
   "keywords": "",
-  "translations": { "fr": "blog/premier-article" }
+  "translations": { "fr": "blog/premier-article" },
+  "created": "10-05-2019",
+  "modified": "12-05-2019"
 }

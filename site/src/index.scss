@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import '@wooweb/core/variables';
+@import './commons/scss/variables.scss';
 
 @import './commons/scss/font-face';
 
@@ -19,15 +20,15 @@
 
 /* Atoms */
 
-@import './components/title/title';
-@import './components/icon/icon';
+@import '@wooweb/title/index';
+@import '@wooweb/icon/index';
 @import './components/more/more';
 @import '@wooweb/button/index';
 
 /* Molecules */
 
-@import './components/logo/logo';
-@import './components/header/header';
+@import '@wooweb/header/index';
+@import '@wooweb/logo/index';
 @import './components/footer/footer';
 @import './components/menu/menu';
 @import './components/repo/repo';
@@ -38,7 +39,7 @@
 @import './components/demo/demo';
 
 /* Layouts */
-@import './components/content/content';
+@import '@wooweb/content/index';
 @import './components/page/page';
 
 /* Pages */
