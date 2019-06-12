@@ -7,14 +7,14 @@
 
 /* Import Normalize ******************************/
 
-@import './commons/scss/normalize';
-@import './commons/scss/reset';
+@import '@wooweb/core/normalize';
+@import '@wooweb/core/reset';
 
 /* Import components *****************************/
 
 /* Commons */
 
-@import './commons/scss/mixins';
+@import '@wooweb/core//mixins';
 @import './commons/scss/markdown';
 @import './commons/scss/main.scss';
 
@@ -29,7 +29,7 @@
 
 @import '@wooweb/header/index';
 @import '@wooweb/logo/index';
-@import './components/footer/footer';
+@import '@wooweb/footer/index';
 @import './components/menu/menu';
 @import './components/repo/repo';
 @import './components/encart/encart';

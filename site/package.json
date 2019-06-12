@@ -37,6 +37,7 @@
     "@wooweb/header": "^1.0.6",
     "@wooweb/logo": "^1.0.6",
     "@wooweb/img": "^1.0.6",
+    "@wooweb/footer": "^1.0.6",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",

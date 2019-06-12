@@ -19,6 +19,7 @@ include ../../node_modules/@wooweb/content/index
 include ../../node_modules/@wooweb/logo/index
 include ../../node_modules/@wooweb/img/index
 include ../../node_modules/@wooweb/header/index
+include ../../node_modules/@wooweb/footer/index
 include ../components/more/more
 include ../components/repo/repo
 include ../components/menu/menu
@@ -54,7 +55,7 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
         include ../components/header/header
         +Content({modifier: id, js:true})
             block content
-        include ../components/footer/footer
+        +Footer({js:true})
         div(style="display:none")
             include ../assets/sprite/sprite.svg
         script(src=`${basedir}bundle.js`)

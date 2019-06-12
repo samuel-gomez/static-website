@@ -1,0 +1,7 @@
+mixin Footer({modifier = '', js=false})
+	-const classComponent = setClass('footer', modifier, js)
+	-const year = new Date().getFullYear();
+	footer(class=classComponent)
+		span(class=`${prefix}-footer__privacy`)
+			| Privacy Policy © #{year} AXA All Rights Reserved
+		block
