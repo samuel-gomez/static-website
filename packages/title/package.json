@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/title",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Wooweb Title component",
   "private": false,
   "publishConfig": {
@@ -27,7 +27,7 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.0.6"
+    "@wooweb/core": "^1.1.0"
   },
   "peerDependencies": {
     "pug": "^2.0.3"

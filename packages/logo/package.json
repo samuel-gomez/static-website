@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/logo",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Wooweb Logo component",
   "private": false,
   "publishConfig": {
@@ -27,9 +27,9 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.0.6",
-    "@wooweb/img": "^1.0.6",
-    "@wooweb/title": "^1.0.6"
+    "@wooweb/core": "^1.1.0",
+    "@wooweb/img": "^1.1.0",
+    "@wooweb/title": "^1.1.0"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
