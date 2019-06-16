@@ -1,4 +1,5 @@
 {
   "prefix": "sg",
-  "prefixjs": "js"
+  "prefixjs": "js",
+  "pathImg": "assets/images"
 }

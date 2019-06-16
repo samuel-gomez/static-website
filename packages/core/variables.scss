@@ -2,6 +2,7 @@ $prefix: 'sg' !default;
 $prefixjs: 'js' !default;
 
 /* Font */
+$browser-context: 16;
 $font-family-base: 'Source Sans Pro', sans-serif !default;
 $font-family-logo: 'Source Sans Pro', 'Times New Roman', Times, serif !default;
 $font-family-headings: $font-family-logo !default;
@@ -29,6 +30,7 @@ $color-green-1: #1cc578 !default;
 $color-green-2: #10a992 !default;
 $color-green-3: #3db899 !default;
 $color-green-4: #18a854 !default;
+$color-turkoise: #a1fffe !default;
 
 /* Layout */
 $menu-width: 300px;
@@ -39,3 +41,15 @@ $color-page-header: #4975ba;
 $color-code-background: #282c34;
 $color-action-2: #d3d3e7 !default;
 $color-flamingo: #ec4d33;
+
+$breakpoints: (
+  'small': (
+    min-width: 767px,
+  ),
+  'medium': (
+    min-width: 992px,
+  ),
+  'large': (
+    min-width: 1200px,
+  ),
+) !default;

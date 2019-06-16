@@ -1,0 +1,5 @@
+@import './variables.scss';
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

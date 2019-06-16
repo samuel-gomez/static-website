@@ -5,15 +5,15 @@
       "childsmenu": [
         {
           "href": "/",
-          "label": "accueil"
+          "label": "Accueil"
         },
         {
           "href": "/demarrer",
-          "label": "démarrer"
+          "label": "Démarrer"
         },
         {
           "href": "/blog",
-          "label": "blog"
+          "label": "Blog"
         }
       ]
     }
@@ -24,15 +24,15 @@
       "childsmenu": [
         {
           "href": "/",
-          "label": "home"
+          "label": "Home"
         },
         {
           "href": "/get-started",
-          "label": "get started"
+          "label": "Get started"
         },
         {
           "href": "/blog",
-          "label": "blog"
+          "label": "Blog"
         }
       ]
     }

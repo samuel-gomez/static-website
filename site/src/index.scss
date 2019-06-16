@@ -1,45 +1,55 @@
 @charset "UTF-8";
 
 @import '@wooweb/core/variables';
+@import '@wooweb/core/functions';
 @import './commons/scss/variables.scss';
-
 @import './commons/scss/font-face';
 
-/* Import Normalize ******************************/
-
+/* Import Normalize/reset ********************************/
 @import '@wooweb/core/normalize';
 @import '@wooweb/core/reset';
 
-/* Import components *****************************/
+/* Import @Wooweb components *****************************/
 
 /* Commons */
+@import '@wooweb/core/mixins';
 
-@import '@wooweb/core//mixins';
+/* Atoms */
+@import '@wooweb/title/index';
+@import '@wooweb/icon/index';
+@import '@wooweb/button/index';
+
+/* Molecules */
+@import '@wooweb/header/index';
+@import '@wooweb/footer/index';
+
+/* Organisms */
+
+/* Layouts */
+@import '@wooweb/content/index';
+
+/* Import Project components *****************************/
+
+/* Commons */
 @import './commons/scss/markdown';
 @import './commons/scss/main.scss';
 
 /* Atoms */
-
-@import '@wooweb/title/index';
-@import '@wooweb/icon/index';
 @import './components/more/more';
-@import '@wooweb/button/index';
 
 /* Molecules */
-
-@import '@wooweb/header/index';
-@import '@wooweb/logo/index';
-@import '@wooweb/footer/index';
+@import './components/header/header';
+@import './components/footer/footer';
+@import './components/img/img';
+@import './components/title/title';
 @import './components/menu/menu';
 @import './components/repo/repo';
 @import './components/encart/encart';
 
 /* Organisms */
-@import './components/tabs/tabs';
-@import './components/demo/demo';
 
 /* Layouts */
-@import '@wooweb/content/index';
+@import './components/content/content';
 @import './components/page/page';
 
 /* Pages */

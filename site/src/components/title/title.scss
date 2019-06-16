@@ -1,0 +1,20 @@
+.#{$prefix} {
+  &-title--logo {
+    &-name {
+      color: $white;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: em(40);
+      transform: scaleY(0.7);
+      letter-spacing: -4px;
+    }
+    &-subtitle {
+      color: $color-turkoise;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: em(19);
+      transform: scaleY(0.8);
+      letter-spacing: 5px;
+    }
+  }
+}

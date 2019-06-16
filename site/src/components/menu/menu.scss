@@ -80,3 +80,44 @@
     }
   }
 }
+
+@include respond-to('large') {
+  .#{$prefix} {
+    &-menu {
+      &__nav {
+        background: inherit;
+        position: relative;
+        transform: inherit;
+        width: auto;
+        height: auto;
+        margin: 0;
+      }
+      &__list {
+        display: flex;
+        &:not(.tk-menu__list--child) {
+          background: inherit;
+          border: 0;
+        }
+      }
+      &__item {
+        &:not(:last-child) {
+          border: 0;
+        }
+      }
+      &__item-link {
+        display: inherit;
+        background: inherit;
+        color: $white;
+        padding: 0.5rem 1rem;
+        font-weight: 200;
+      }
+      &__item-text {
+        display: none;
+      }
+      &__open,
+      &__close {
+        display: none;
+      }
+    }
+  }
+}

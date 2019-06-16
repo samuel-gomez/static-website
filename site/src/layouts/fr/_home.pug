@@ -1,4 +1,4 @@
-extends ../main
+extends ../home
 
 append vars
     -var lang = "fr"
@@ -11,4 +11,5 @@ block meta
     -var metaKeywords = page.keywords
 
 block headerlinks
+    +Menu({activePath: page.link})
     +Translate({translations:page.translations})

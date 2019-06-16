@@ -1,4 +1,6 @@
-mixin Translate({translations})
-    each item, key in translations
-        a(href=`/${key}/${item}`)
-            | #{key}
+mixin Translate({translations, modifier = '', js=false})
+    -const classComponent = setClass('translate', modifier, js)
+    nav(class=classComponent)
+        each item, key in translations
+            a(href=`/${key}/${item}`)
+                | #{key}
