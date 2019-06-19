@@ -18,7 +18,7 @@ class Smoke {
     }
     this.initSmoke();
     this.animate();
-    window.addEventListener('resize', this.onWindowResize, false);
+    window.addEventListener('resize', this.onWindowResize.bind(this), false);
   }
 
   initSmoke() {
@@ -35,7 +35,7 @@ class Smoke {
     this.clock = new THREE.Clock();
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setClearColor(0x000000, 0.5);
-    this.renderer.setSize(window.innerWidth - 17, window.innerHeight);
+    this.renderer.setSize(window.innerWidth - 17, window.innerHeight - 1);
     this.scene = new THREE.Scene();
   }
 
@@ -118,7 +118,7 @@ class Smoke {
     // cameraR.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     // cameraR.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth - 17, window.innerHeight);
+    this.renderer.setSize(window.innerWidth - 17, window.innerHeight - 1);
     // rendererR.setSize(window.innerWidth, window.innerHeight);
   }
 

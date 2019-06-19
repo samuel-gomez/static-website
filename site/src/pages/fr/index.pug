@@ -3,3 +3,10 @@ extends ../../layouts/fr/_home
 block content
     +Title({})
         | Page d'accueil
+    div(class=`${prefix}-home__bubbles`)
+        +Bubble({})
+            +Img({src:`${basedir}${pathImg}uxdesign.svg`, alt, modifier:''})
+        +Bubble({})
+            +Img({src:`${basedir}${pathImg}developpement-frontend.svg`, alt, modifier:''})
+        +Bubble({})
+            +Img({src:`${basedir}${pathImg}opensource.svg`, alt, modifier:''})
