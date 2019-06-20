@@ -1,11 +1,17 @@
 .#{$prefix} {
   &-home {
+    background: red;
     &__bubbles {
       margin-top: 10em;
       display: flex;
       align-content: center;
       justify-content: space-evenly;
     }
+  }
+  &-ray,
+  &-smoke {
+    position: fixed;
+    width: 100%;
   }
   &-content {
     &--home {
