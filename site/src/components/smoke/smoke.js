@@ -1,22 +1,49 @@
 /* eslint-disable no-undef */
 import { prefixjs, pathImg } from '@wooweb/core/config.json';
 import $ from '../../commons/js/selector';
+import $$ from '../../commons/js/selectorAll';
 
 const classSmoke = `${prefixjs}-smoke`;
 const basePath = `${window.location.protocol}//${window.location.host}`;
+const bubbleClass = `${prefixjs}-bubble`;
+const siteClass = `${prefixjs}-body`;
+
+const enumBgColors = {
+  uxdesign: '#9726b8',
+  development: '#0078ba',
+  opensource: '#c62615',
+};
 
 class Smoke {
   constructor() {
     this.smoke = $(classSmoke);
+    this.bubbles = $$(document)(`.${bubbleClass}`);
+    this.site = $(siteClass);
   }
 
   init() {
     if (this.isNotExitingElement()) {
       return;
     }
+    if (this.bubbles.length) {
+      this.initEvents(this.bubbles);
+    }
     this.initSmoke();
     this.animate();
     window.addEventListener('resize', this.onWindowResize.bind(this), false);
+  }
+
+  initEvents(elts) {
+    [].forEach.call(elts, elt => elt.addEventListener('click', e => this.setActive(e), true));
+  }
+
+  setActive(e) {
+    const id = e.currentTarget.getAttribute('id');
+    const colorStr = enumBgColors[id];
+    const color = parseInt(colorStr.replace(/^#/, ''), 16);
+    this.site.classList.add(`sg-body--${id}`);
+    console.log(colorStr, color, 0x9726b8, color.toString(16), id);
+    this.setSmoke({ color });
   }
 
   initSmoke() {
@@ -25,8 +52,7 @@ class Smoke {
     this.addText();
     this.addLight({});
     this.addLight({ color: 0xffffff });
-    this.setSmoke();
-    this.appendSmokeScene();
+    this.setSmoke({ color: 0x9726b8 });
   }
 
   initSmokeScene() {
@@ -48,7 +74,7 @@ class Smoke {
     THREE.ImageUtils.crossOrigin = '';
     const textTexture = new THREE.TextureLoader().load(`${basePath}/${pathImg}/sg.png`);
     const textMaterial = new THREE.MeshLambertMaterial({
-      color: 0x00ffff,
+      color: 0xffffff,
       opacity: 0.7,
       map: textTexture,
       transparent: true,
@@ -66,10 +92,10 @@ class Smoke {
     this.scene.add(light);
   }
 
-  setSmoke() {
+  setSmoke({ color }) {
     const smokeTexture = new THREE.TextureLoader().load(`${basePath}/${pathImg}/Smoke-Element.png`);
     const smokeMaterial = new THREE.MeshLambertMaterial({
-      color: 0x00ffff,
+      color,
       map: smokeTexture,
       transparent: true,
     });
@@ -87,6 +113,7 @@ class Smoke {
       this.scene.add(particle);
       this.smokeParticles.push(particle);
     }
+    this.appendSmokeScene();
   }
 
   appendSmokeScene() {

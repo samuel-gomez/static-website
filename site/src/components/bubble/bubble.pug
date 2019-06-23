@@ -1,4 +1,4 @@
-mixin Bubble({ modifier = '', js=false})
+mixin Bubble({ modifier = '', js=false, id=""})
 	-const classComponent = setClass('bubble', modifier, js)
-	div(class=classComponent)
+	div(class=classComponent id=(id !== "" ? id : false))
 		block

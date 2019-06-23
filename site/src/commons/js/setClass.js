@@ -9,7 +9,7 @@ export default (block, modifier, js = false) => {
     if (modifier.split(' ').length > 1) {
       classComponent += modifier
         .split(' ')
-        .map(mod => ` ${setModifier(`${prefix}-${block}`, mod)}`)
+        .map(mod => `${setModifier(`${prefix}-${block}`, mod)}`)
         .join(' ');
     } else {
       classComponent += ` ${setModifier(`${prefix}-${block}`, modifier)}`;

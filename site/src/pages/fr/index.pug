@@ -1,12 +1,16 @@
 extends ../../layouts/fr/_home
 
 block content
-    +Title({})
-        | Page d'accueil
     div(class=`${prefix}-home__bubbles`)
-        +Bubble({})
+        +Bubble({js: true, modifier:"uxdesign", id:"uxdesign"})
+            +Title({modifier:'bubble'})
+                | ux design
             +Img({src:`${basedir}${pathImg}uxdesign.svg`, alt, modifier:''})
-        +Bubble({})
+        +Bubble({js: true, modifier:"development", id:"development"})
+            +Title({modifier:'bubble'})
+                | développement
             +Img({src:`${basedir}${pathImg}developpement-frontend.svg`, alt, modifier:''})
-        +Bubble({})
+        +Bubble({js: true, modifier:"opensource", id:"opensource"})
+            +Title({modifier:'bubble'})
+                | open source
             +Img({src:`${basedir}${pathImg}opensource.svg`, alt, modifier:''})

@@ -4,7 +4,7 @@ export default (classComponent, modifier) => {
   }
   const classes = classComponent.split(' ');
   if (classes.length > 1) {
-    return ` ${classes.map(classe => `${classe}--${modifier}`).join(' ')}`;
+    return `${classes.map(classe => `${classe}--${modifier}`).join(' ')}`;
   }
-  return ` ${classComponent}--${modifier}`;
+  return `${classComponent}--${modifier}`;
 };

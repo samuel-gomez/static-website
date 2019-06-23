@@ -46,10 +46,10 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
         link(href=`${basedir}bundle.css` rel="stylesheet" type="text/css")
         style
             block style
-    body(id=`${prefix}-${id}-body` class=`${prefix}-body`)
+    body(id=`${prefix}-${id}-body` class=`${prefix}-body ${prefixjs}-body`)
         div(class=`${prefix}-smoke ${prefixjs}-smoke`)
         div(class=`${prefix}-ray ${prefixjs}-ray`)
-        div(class=`${prefix}-site`)
+        div(class=`${prefix}-site ${prefixjs}-site`)
             block menu
             +Header({ basedir, pathImg, link: { href:basedir, title:"Retour à l'accueil"}, logo: { title:logoTitle, subtitle:logoSubTitle, img: logoImg, alt: logoAlt, modifier:'header' } })
                 block headerlinks
