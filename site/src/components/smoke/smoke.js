@@ -1,10 +1,12 @@
 /* eslint-disable no-undef */
-import { prefixjs, pathImg } from '@wooweb/core/config.json';
+import { prefix, prefixjs, pathImg } from '@wooweb/core/config.json';
 import $ from '../../commons/js/selector';
 import $$ from '../../commons/js/selectorAll';
 
 const classSmoke = `${prefixjs}-smoke`;
 const basePath = `${window.location.protocol}//${window.location.host}`;
+const bubblesClass = `${prefixjs}-home__bubbles`;
+const bubblesClassActive = `${prefix}-bubbles--active`;
 const bubbleClass = `${prefixjs}-bubble`;
 const siteClass = `${prefixjs}-body`;
 
@@ -19,6 +21,7 @@ class Smoke {
     this.smoke = $(classSmoke);
     this.bubbles = $$(document)(`.${bubbleClass}`);
     this.site = $(siteClass);
+    this.bubbleContainer = $(bubblesClass);
   }
 
   init() {
@@ -28,7 +31,7 @@ class Smoke {
     if (this.bubbles.length) {
       this.initEvents(this.bubbles);
     }
-    this.initSmoke();
+    this.initSmoke({ color: 0x00ffff });
     this.animate();
     window.addEventListener('resize', this.onWindowResize.bind(this), false);
   }
@@ -41,18 +44,24 @@ class Smoke {
     const id = e.currentTarget.getAttribute('id');
     const colorStr = enumBgColors[id];
     const color = parseInt(colorStr.replace(/^#/, ''), 16);
-    this.site.classList.add(`sg-body--${id}`);
-    console.log(colorStr, color, 0x9726b8, color.toString(16), id);
-    this.setSmoke({ color });
+    this.site.className = `${prefix}-body ${prefixjs}-body sg-body--${id}`;
+    [].forEach.call(this.bubbles, elt => {
+      if (elt.getAttribute('id') === id) {
+        elt.classList.add(`${prefix}-bubble--active`);
+      } else {
+        elt.classList.add(`${prefix}-bubble--inactive`);
+      }
+    });
+    this.initSmoke({ color });
   }
 
-  initSmoke() {
+  initSmoke({ color }) {
     this.initSmokeScene();
     this.initCamera();
     this.addText();
     this.addLight({});
     this.addLight({ color: 0xffffff });
-    this.setSmoke({ color: 0x9726b8 });
+    this.setSmoke({ color });
   }
 
   initSmokeScene() {
@@ -93,6 +102,7 @@ class Smoke {
   }
 
   setSmoke({ color }) {
+    this.smokeParticles = [];
     const smokeTexture = new THREE.TextureLoader().load(`${basePath}/${pathImg}/Smoke-Element.png`);
     const smokeMaterial = new THREE.MeshLambertMaterial({
       color,
@@ -117,6 +127,7 @@ class Smoke {
   }
 
   appendSmokeScene() {
+    this.smoke.innerHTML = '';
     this.smoke.appendChild(this.renderer.domElement);
   }
 

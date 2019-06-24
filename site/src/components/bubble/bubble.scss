@@ -12,7 +12,7 @@
     justify-content: center;
     padding: 2%;
     transform: scale(0);
-    cursor:pointer;
+    cursor: pointer;
     @for $i from 1 through 3 {
       $duration: random(3) + 1;
       $delayAppear: 1 + ($i / 6);
@@ -69,6 +69,20 @@
       border-radius: 56% 53%;
       transform: rotate(40deg);
     }
+    &.#{$prefix}-bubble--active {
+      transform: scale(1.4);
+      animation: none;
+      .sg-title--bubble {
+        top: 50%;
+        transform: translate(-50%, -50%) scaleY(0.8) scaleY(1);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        font-size: em(60);
+        width: 200%;
+      }
+    }
+    &.#{$prefix}-bubble--inactive {
+      display: none;
+    }
   }
   &-title {
     &--bubble {
@@ -82,16 +96,6 @@
       text-transform: uppercase;
       font-size: em(30);
       letter-spacing: -3px;
-      &:after {
-        content: '';
-        position: absolute;
-        transform: translate(-50%, 0) scaleY(0.8);
-        left: 50%;
-        bottom: -15px;
-        width: 33%;
-        height: 0;
-        box-shadow: 0 0 14px 7px rgba(1, 24, 23, 0.9);
-      }
     }
   }
 }
