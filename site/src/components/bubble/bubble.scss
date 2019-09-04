@@ -1,5 +1,57 @@
 .#{$prefix} {
   &-bubble {
+    &-outer {
+      width: 320px;
+      transform: scale(0);
+      cursor: pointer;
+      @for $i from 1 through 3 {
+        $duration: random(3) + 1;
+        $delayAppear: ($i / 6);
+        &:nth-child(#{$i}) {
+          animation: appear
+              0.5s
+              cubic-bezier(0.25, 0.46, 0.45, 0.94)
+              #{$delayAppear}s
+              both,
+            distord#{$i} #{$duration}s infinite 2s;
+        }
+        $scaleY: (random(3) / 100) + 0.9;
+        $scale: 0.97;
+        @keyframes distord#{$i} {
+          0% {
+            transform: translateY(0) scaleY(1) scaleX(#{$scale});
+          }
+          50% {
+            transform: translateY(0) scaleY(#{$scale}) scaleX(1);
+          }
+          100% {
+            transform: translateY(0) scaleY(1) scaleX(#{$scale});
+          }
+        }
+      }
+      &.#{$prefix}-bubble-outer--active {
+        animation: activeBubble 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        .#{$prefix} {
+          &-title--bubble {
+            top: 50%;
+            transform: translate(-50%, -50%) scaleY(0.8) scaleY(1);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            font-size: em(60);
+            width: 200%;
+          }
+          &-article-text--bubble {
+            display: block;
+            animation: slideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+              forwards;
+          }
+        }
+      }
+      &.#{$prefix}-bubble-outer--inactive {
+        animation: disappear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        transform: scale(0);
+        display: none;
+      }
+    }
     position: relative;
     border: 1px solid $white;
     height: 250px;
@@ -10,42 +62,18 @@
     display: flex;
     align-content: center;
     justify-content: center;
-    padding: 2%;
-    transform: scale(0);
-    cursor: pointer;
-    @for $i from 1 through 3 {
-      $duration: random(3) + 1;
-      $delayAppear: 1 + ($i / 6);
-      &:nth-child(#{$i}) {
-        animation: appear
-            0.5s
-            cubic-bezier(0.25, 0.46, 0.45, 0.94)
-            #{$delayAppear}s
-            both,
-          distord#{$i} #{$duration}s infinite 2s;
-      }
-      $scaleY: (random(3) / 100) + 0.9;
-      $scale: 0.97;
-      @keyframes distord#{$i} {
-        0% {
-          transform: translateY(0) scaleY(1) scaleX(#{$scale});
-        }
-        50% {
-          transform: translateY(0) scaleY(#{$scale}) scaleX(1);
-        }
-        100% {
-          transform: translateY(0) scaleY(1) scaleX(#{$scale});
-        }
-      }
-    }
+    align-items: center;
+    flex-direction: column;
+    padding: 8%;
+    margin: 0 auto 1em auto;
 
     &:before {
       content: '';
       position: absolute;
-      top: 33px;
-      left: 176px;
-      width: 60px;
-      height: 5px;
+      top: 29px;
+      left: 177px;
+      width: 52px;
+      height: 7px;
       background: $white;
       border-radius: 50% 100%;
       box-shadow: 0 0 10px 2px rgba(255, 255, 255, 1),
@@ -69,20 +97,6 @@
       border-radius: 56% 53%;
       transform: rotate(40deg);
     }
-    &.#{$prefix}-bubble--active {
-      transform: scale(1.4);
-      animation: none;
-      .sg-title--bubble {
-        top: 50%;
-        transform: translate(-50%, -50%) scaleY(0.8) scaleY(1);
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        font-size: em(60);
-        width: 200%;
-      }
-    }
-    &.#{$prefix}-bubble--inactive {
-      display: none;
-    }
   }
   &-title {
     &--bubble {
@@ -98,16 +112,64 @@
       letter-spacing: -3px;
     }
   }
+  &-article-text {
+    &__title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+    &--bubble {
+      display: none;
+      text-align: center;
+      width: $width-mobile;
+      font-weight: 200;
+    }
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, -100);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes appear {
   0% {
+    opacity: 0;
     transform: scale(0);
   }
   50% {
+    opacity: 1;
     transform: scale(1.5);
   }
   100% {
+    opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes activeBubble {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
   }
 }

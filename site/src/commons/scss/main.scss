@@ -12,7 +12,7 @@ a {
 }
 .#{$prefix} {
   &-body {
-    height: 100vh;
+    min-height: 100vh;
     background-image: radial-gradient(
         ellipse at 0% 0%,
         rgba(107, 240, 255, 0) 0%,
@@ -36,13 +36,6 @@ a {
       radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.5) 50%);
   }
   &-site {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 0 500px 100px rgba(0, 0, 0, 0.8) inset;
-    background: transparent;
   }
 }
 

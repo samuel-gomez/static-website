@@ -29,6 +29,8 @@ include ../components/menu/menuitem
 include ../components/menu/submenu
 include ../components/translate/translate
 include ../components/bubble/bubble
+include ../components/bubble/bubbleBase
+include ../components/articletext/articletext
 
 doctype html
 html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
@@ -49,7 +51,7 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
     body(id=`${prefix}-${id}-body` class=`${prefix}-body ${prefixjs}-body`)
         div(class=`${prefix}-smoke ${prefixjs}-smoke`)
         div(class=`${prefix}-ray ${prefixjs}-ray`)
-        div(class=`${prefix}-site ${prefixjs}-site`)
+        div(class=`${prefix}-site ${prefixjs}-site ${prefix}-site--${id}`)
             block menu
             +Header({ basedir, pathImg, link: { href:basedir, title:"Retour à l'accueil"}, logo: { title:logoTitle, subtitle:logoSubTitle, img: logoImg, alt: logoAlt, modifier:'header' } })
                 block headerlinks

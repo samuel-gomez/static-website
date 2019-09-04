@@ -5,6 +5,16 @@
       display: flex;
       align-content: center;
       justify-content: space-evenly;
+      position: relative;
+      &--active {
+        justify-content: center;
+        .#{$prefix} {
+          &-icon--closeBubble {
+            opacity: 1;
+            animation: fadein 0.5s linear;
+          }
+        }
+      }
     }
   }
   &-ray,
@@ -12,10 +22,7 @@
     position: fixed;
     width: 100%;
   }
-  &-content {
-    &--home {
-    }
-  }
+
   &-body {
     &--uxdesign {
       background-image: radial-gradient(
@@ -82,5 +89,42 @@
           rgba(0, 0, 0, 0.5) 50%
         );
     }
+  }
+
+  &-site--home {
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 500px 100px rgba(0, 0, 0, 0.8) inset;
+    background: transparent;
+  }
+
+  &-icon--closeBubble {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: 5%;
+    fill: $white;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

@@ -1,0 +1,5 @@
+mixin ArticleText({ nameComponent = 'article-text' ,modifier = '', js=false, title, text})
+    -const classComponent = setClass(nameComponent, modifier, js)
+    article(class=classComponent)
+        h2(class=`${prefix}-${nameComponent}__title`) #{title}
+        p(class=`${prefix}-${nameComponent}__content`) #{text}

@@ -1,8 +1,9 @@
-extends ./_home
+extends ../main
 
 append vars
+    -var lang = "fr"
     -var id = "blog"
-    -basedir = `../${basedir}`
+    -basedir = `../../${basedir}`
     -var page = pages[lang].find(page => page.id === name)
 
 block meta
@@ -11,7 +12,5 @@ block meta
     -var metaKeywords = page.keywords
 
 block headerlinks
-    +Translate({translations:page.translations})
-
-block menu
     +Menu({activePath: page.link})
+    +Translate({translations:page.translations})

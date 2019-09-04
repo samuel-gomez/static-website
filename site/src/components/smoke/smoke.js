@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 /* eslint-disable no-undef */
 import { prefix, prefixjs, pathImg } from '@wooweb/core/config.json';
 import $ from '../../commons/js/selector';
@@ -6,14 +7,18 @@ import $$ from '../../commons/js/selectorAll';
 const classSmoke = `${prefixjs}-smoke`;
 const basePath = `${window.location.protocol}//${window.location.host}`;
 const bubblesClass = `${prefixjs}-home__bubbles`;
-const bubblesClassActive = `${prefix}-bubbles--active`;
-const bubbleClass = `${prefixjs}-bubble`;
+const bubbleClass = `${prefixjs}-bubble-outer`;
+const bubbleClassActive = `${prefix}-bubble-outer--active`;
+const bubbleClassInactive = `${prefix}-bubble-outer--inactive`;
 const siteClass = `${prefixjs}-body`;
+const bubbleContainerClassActive = `${prefix}-home__bubbles--active`;
+const closeBubbleClass = `${prefixjs}-icon--closeBubble`;
 
 const enumBgColors = {
-  uxdesign: '#9726b8',
-  development: '#0078ba',
-  opensource: '#c62615',
+  default: ['#9726b8', '#FF9359'],
+  uxdesign: ['#9726b8', '#FF9359'],
+  development: ['#0078ba', '#000059'],
+  opensource: ['#c62615', '#FF00FF'],
 };
 
 class Smoke {
@@ -22,45 +27,74 @@ class Smoke {
     this.bubbles = $$(document)(`.${bubbleClass}`);
     this.site = $(siteClass);
     this.bubbleContainer = $(bubblesClass);
+    this.closeBubble = $(closeBubbleClass);
   }
 
   init() {
     if (this.isNotExitingElement()) {
       return;
     }
-    if (this.bubbles.length) {
-      this.initEvents(this.bubbles);
-    }
-    this.initSmoke({ color: 0x00ffff });
+
+    this.initEvents();
+    this.initSmoke({ color: 0x00ffff, colorLight: 0x00ffff });
     this.animate();
     window.addEventListener('resize', this.onWindowResize.bind(this), false);
   }
 
-  initEvents(elts) {
+  initEvents() {
+    if (this.bubbles.length) {
+      this.initEventsBubble(this.bubbles);
+    }
+    if (this.closeBubble) {
+      this.initEventCloseBubble();
+    }
+  }
+
+  initEventCloseBubble() {
+    this.closeBubble.addEventListener('click', this.clearActive.bind(this), true);
+  }
+
+  initEventsBubble(elts) {
     [].forEach.call(elts, elt => elt.addEventListener('click', e => this.setActive(e), true));
   }
 
   setActive(e) {
     const id = e.currentTarget.getAttribute('id');
-    const colorStr = enumBgColors[id];
+    const colorStr = enumBgColors[id][0];
     const color = parseInt(colorStr.replace(/^#/, ''), 16);
+    const colorStrLight = enumBgColors[id][1];
+    const colorLight = parseInt(colorStrLight.replace(/^#/, ''), 16);
     this.site.className = `${prefix}-body ${prefixjs}-body sg-body--${id}`;
+    this.bubbleContainer.classList.add(bubbleContainerClassActive);
     [].forEach.call(this.bubbles, elt => {
       if (elt.getAttribute('id') === id) {
-        elt.classList.add(`${prefix}-bubble--active`);
+        elt.classList.add(bubbleClassInactive);
+        setTimeout(() => {
+          elt.classList.remove(bubbleClassInactive);
+          elt.classList.add(bubbleClassActive);
+        }, 250);
       } else {
-        elt.classList.add(`${prefix}-bubble--inactive`);
+        elt.classList.add(bubbleClassInactive);
       }
     });
-    this.initSmoke({ color });
+    this.initSmoke({ color, colorLight });
   }
 
-  initSmoke({ color }) {
+  clearActive() {
+    this.bubbleContainer.classList.remove(bubbleContainerClassActive);
+    this.site.className = `${prefix}-body ${prefixjs}-body`;
+    [].forEach.call(this.bubbles, elt => {
+      elt.classList.remove(bubbleClassActive);
+      elt.classList.remove(bubbleClassInactive);
+    });
+  }
+
+  initSmoke({ color, colorLight }) {
     this.initSmokeScene();
     this.initCamera();
     this.addText();
     this.addLight({});
-    this.addLight({ color: 0xffffff });
+    this.addLight({ color: colorLight });
     this.setSmoke({ color });
   }
 

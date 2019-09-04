@@ -11,11 +11,10 @@ const openFullScreen = e => {
   e.currentTarget.closest(`.${classDisplay}`).classList.add(`${classDisplay}--${activeModifier}`);
 };
 
-const closeFullScreen = e => {
+const closeFullScreen = e =>
   e.currentTarget
     .closest(`.${classDisplay}--${activeModifier}`)
     .classList.remove(`${classDisplay}--${activeModifier}`);
-};
 
 class Demo {
   constructor() {

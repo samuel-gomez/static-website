@@ -1,4 +1,4 @@
 mixin Bubble({ modifier = '', js=false, id=""})
-	-const classComponent = setClass('bubble', modifier, js)
+	-const classComponent = setClass('bubble-outer', modifier, js)
 	div(class=classComponent id=(id !== "" ? id : false))
 		block

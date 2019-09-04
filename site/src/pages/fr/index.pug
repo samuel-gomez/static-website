@@ -1,16 +1,23 @@
 extends ../../layouts/fr/_home
 
 block content
-    div(class=`${prefix}-home__bubbles ${prefixjs}-home__bubbles`)
+    section(class=`${prefix}-home__bubbles ${prefixjs}-home__bubbles`)
         +Bubble({js: true, modifier:"uxdesign", id:"uxdesign"})
-            +Title({modifier:'bubble'})
-                | ux design
-            +Img({src:`${basedir}${pathImg}uxdesign.svg`, alt, modifier:''})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | ux design
+                +Img({src:`${basedir}${pathImg}uxdesign.svg`, alt, modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"L’expérience utilisateur", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
         +Bubble({js: true, modifier:"development", id:"development"})
-            +Title({modifier:'bubble'})
-                | développement
-            +Img({src:`${basedir}${pathImg}developpement-frontend.svg`, alt, modifier:''})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | développement
+                +Img({src:`${basedir}${pathImg}developpement-frontend.svg`, alt, modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"Développment Web", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
         +Bubble({js: true, modifier:"opensource", id:"opensource"})
-            +Title({modifier:'bubble'})
-                | open source
-            +Img({src:`${basedir}${pathImg}opensource.svg`, alt, modifier:''})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | open source
+                +Img({src:`${basedir}${pathImg}opensource.svg`, alt,modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"L’open Source", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
+        +Icon({id:'cross-gap', modifier:"closeBubble", js:true})
