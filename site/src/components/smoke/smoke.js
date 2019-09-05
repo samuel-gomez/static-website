@@ -113,12 +113,14 @@ class Smoke {
   }
 
   addText() {
-    const textGeo = new THREE.PlaneGeometry(200, 200);
+    const textGeo = new THREE.PlaneGeometry(400, 300);
     THREE.ImageUtils.crossOrigin = '';
-    const textTexture = new THREE.TextureLoader().load(`${basePath}/${pathImg}/sg.png`);
+    const textTexture = new THREE.TextureLoader().load(
+      `${basePath}/${pathImg}/samuel-gomez-logo.png`,
+    );
     const textMaterial = new THREE.MeshLambertMaterial({
       color: 0xffffff,
-      opacity: 0.7,
+      opacity: 0.08,
       map: textTexture,
       transparent: true,
       blending: THREE.AdditiveBlending,
