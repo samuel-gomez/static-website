@@ -6,7 +6,7 @@
   "files": [
     "dist/"
   ],
-  "main": "dist/index.js",
+  "main": "dist/index.html",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",

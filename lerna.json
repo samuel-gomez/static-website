@@ -1,8 +1,5 @@
 {
-  "packages": [
-    "packages/*",
-    "site"
-  ],
+  "packages": ["packages/*"],
   "command": {
     "publish": {
       "conventionalCommits": true,

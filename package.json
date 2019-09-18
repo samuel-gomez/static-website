@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "lerna run start --stream",
     "build": "lerna run build --stream",
