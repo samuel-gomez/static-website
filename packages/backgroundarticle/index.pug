@@ -1,0 +1,8 @@
+mixin BackgroundArticle({ modifier='', js=false, img="", title="title", text="lorem" })
+    -const classComponent = `${setClass('background-article', modifier, js)}`
+    article(class=classComponent style=`background-image:url(${img})`)
+        +Title({})
+            | #{title}
+        p(class=`${classComponent}__text`)
+            | #{text}
+        
