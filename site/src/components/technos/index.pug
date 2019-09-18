@@ -1,0 +1,10 @@
+mixin Technos ({ items = [], modifier= '', className='technos' })
+    -const classComponent = setClass(className, modifier, true)
+    -const classBase = `${prefix}-${className}`
+    section(class=classComponent)        
+        ul(class=`${classBase}__nav`)
+            each item,index in items
+                li(class=`${classBase}__nav-item`)
+                    +Icon({ id:item.icon, className: `${className}__icon`, js: true, modifier: (index === 0) ? 'active' : '' })
+        each item,index in items
+            +ArticleText({ className:'technos-article', modifier: (index === 0) ? `${item.icon} active` : item.icon, title: item.title, text: item.text, js: true })

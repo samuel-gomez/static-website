@@ -38,6 +38,7 @@
     "@wooweb/img": "^1.1.0",
     "@wooweb/logo": "^1.1.0",
     "@wooweb/title": "^1.1.0",
+    "@wooweb/backgroundarticle": "^1.1.0",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",

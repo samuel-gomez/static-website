@@ -8,7 +8,7 @@ block vars
     -var logoTitle= 'Samuel Gomez'
     -var logoSubTitle = 'développeur web'
     -var logoImg = "samuel-gomez-logo.svg"
-    -var logoAlt = 'Samuel Gomez, Software Engineer'
+    -var logoAlt = 'Samuel Gomez, Senior Software Engineer'
 
 block functions
     -const {setClassActive, setClass, pugg, pretty} = functions
@@ -24,6 +24,7 @@ include ../../node_modules/@wooweb/logo/index
 include ../../node_modules/@wooweb/img/index
 include ../../node_modules/@wooweb/header/index
 include ../../node_modules/@wooweb/footer/index
+include ../../node_modules/@wooweb/backgroundarticle/index
 include ../components/menu/menu
 include ../components/menu/menuitem
 include ../components/menu/submenu
@@ -31,6 +32,7 @@ include ../components/translate/translate
 include ../components/bubble/bubble
 include ../components/bubble/bubbleBase
 include ../components/articletext/articletext
+include ../components/technos/index
 
 doctype html
 html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)

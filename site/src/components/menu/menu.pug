@@ -1,8 +1,8 @@
 mixin Menu({modifier='', activePath='/'})
     -const classComponent = setClass('menu', modifier, true)
     div(class=classComponent)
-        +Icon({id:'cross-gap', className:`${prefix}-menu__close`, modifier:"close", js:true})
-        +Icon({id:'menu-button', className:`${prefix}-menu__open`, modifier:"open", js:true})
+        +Icon({id:'cross-gap', className:`menu__close`, js:true})
+        +Icon({id:'menu-button', className:`menu__open`, js:true})
         nav(class=`${prefix}-menu__nav`)
             if lang === 'en'
                 +SubMenu({menu: menuEn, activePath})

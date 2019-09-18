@@ -1,8 +1,8 @@
-import $ from '../../commons/js/selector';
 import { prefix, prefixjs } from '@wooweb/core/config.json';
+import $ from '../../commons/js/selector';
 
-const classBtnOpen = `${prefixjs}-icon--open`;
-const classBtnClose = `${prefixjs}-icon--close`;
+const classBtnOpen = `${prefixjs}-menu__open`;
+const classBtnClose = `${prefixjs}-menu__close`;
 const classJsFooter = `${prefixjs}-footer`;
 const classJsContent = `${prefixjs}-content`;
 const openModifier = 'opened';

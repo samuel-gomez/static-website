@@ -1,25 +1,25 @@
+import { isEmpty } from 'lodash';
 import { prefix, prefixjs } from '@wooweb/core/config.json';
 
 import setModifier from './setModifier';
 
+const setClassModifier = base => modifiers =>
+  ` ${modifiers.map(modifier => `${setModifier(`${base}`, modifier)}`).join(' ')}`;
+
 export default (block, modifier, js = false) => {
+  const modifiers = modifier.split(' ');
   let classComponent = `${prefix}-${block}`;
 
-  if (modifier !== '') {
-    if (modifier.split(' ').length > 1) {
-      classComponent += modifier
-        .split(' ')
-        .map(mod => `${setModifier(`${prefix}-${block}`, mod)}`)
-        .join(' ');
-    } else {
-      classComponent += ` ${setModifier(`${prefix}-${block}`, modifier)}`;
-    }
+  if (!isEmpty(modifiers)) {
+    classComponent += setClassModifier(classComponent)(modifiers);
   }
+
   if (js) {
-    classComponent += ` ${prefixjs}-${block}`;
-    if (modifier !== '') {
-      classComponent += ` ${setModifier(`${prefixjs}-${block}`, modifier)}`;
+    let classJsComponent = `${prefixjs}-${block}`;
+    if (!isEmpty(modifiers)) {
+      classJsComponent += setClassModifier(classJsComponent)(modifiers);
     }
+    classComponent += ` ${classJsComponent}`;
   }
 
   return classComponent;

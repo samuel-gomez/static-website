@@ -1,6 +1,68 @@
 {
-  "title": "Page d'accueil",
-  "description": "Ceci est la description de la page d'accueil.",
+  "title": "Page d'accueil du Samuel Gomez",
+  "textription": "Ceci est la textription de la page d'accueil.",
   "keywords": "",
-  "translations": { "en": "" }
+  "translations": { "en": "" },
+  "technos": [
+    {
+      "icon": "reactjs",
+      "title": "Développements Logiciel avec <strong>ReactJS</strong>",
+      "text": "<p>C'est une librairie Javascript qu'on ne présente plus, j'utilise React au quotidien au sein de mes projets.</p><p>Sa puissance et sa souplesse permettent de répondre à tous les besoins des interfaces utilisateurs.</p>"
+    },
+    {
+      "icon": "nodejs",
+      "title": "Développements <strong>Nodejs / Express / NestJs</strong>",
+      "text": "<p>NodeJs est également très présent dans la sphère Front-end.</p><p>Je développe des API Rest très facilement ainsi que des sites dynamiques.</p>"
+    },
+    {
+      "icon": "javascript",
+      "title": "Développements <strong>Javascript ES6-7-8</strong>",
+      "text": "<p>C'est le coeur du métier du Front-end (avec le CSS et l'HTML), on l'aime ou on le déteste mais il reste indispensable pour la réalisation d'interfaces interactives Web.</p><p>C'est un langage qui évolue sans cesse et qui permet de développer dans beaucoup de domaines : Front-end, Backend, 3D, VR, IOT, ...</p>"
+    },
+    {
+      "icon": "sass",
+      "title": "Développements design avancé avec <strong>Sass</strong>",
+      "text": "<p>C'est outil très puissant qui permet d'avoir une approche composant des styles tout en évitant une adhérence forte avec le framwork javascript comme pourrait l'être certains outils comme les css modules. J'exclus ceux qui permettent d'intégrer les fichiers SASS évidemment :)</p><p>Pour scoper mes composants, je préfère utiliser des méthologies de nommages comme BEM.</p>"
+    },
+    {
+      "icon": "css3",
+      "title": "Développements <strong>CSS3 et CSS4</strong>",
+      "text": "<p>Le CSS3 et CSS4 ont ouvert beaucoup de possibilités si l'on s'abstrait des compatibilités de certains navigateurs dont je tairais le nom.</p>"
+    },
+    {
+      "icon": "html5",
+      "title": "Développements <strong>HTML5</strong>",
+      "text": "<p>Gros progrès sur cette version de l'HTML par exemple au niveau de la sémantique des balises pour une meilleure accessibilité des interfaces.</p>"
+    },
+    {
+      "icon": "pug",
+      "title": "Développements de sites statiques avec Pug",
+      "text": "<p>Outil un peu vieillissant de templating HTML mais qui fonctionne toujours très bien pour générer des sites statiques.</p>"
+    },
+    {
+      "icon": "mongodb",
+      "title": "Développements de bases de données NoSQL",
+      "text": "<p>A plusieurs reprises, j'ai utilisé Mongodb pour développer des API Rest avec Express et NodeJS.</p>"
+    },
+    {
+      "icon": "angularjs",
+      "title": "Développements de SPA avec <strong>Angular</strong>",
+      "text": "<p>Avec VueJS et Svelte, Angular 'concurrence' React pour le développement front-end des logiciels.</p><p>Bien qu'ils ne soient pas vraiment comparables car avec Angular embarque beaucoup de fonctionnalités alors qu'avec React, il faut ajouter les fonctionnalités à la main selon ses besoins.</p>"
+    },
+    {
+      "icon": "d3js",
+      "title": "Développements de datavisualisation avec <strong>D3JS</strong>",
+      "text": "<p>Librairie très puissante pour la création de graphiques, je me sers notamment pour faire de la DataVisualization.</p>"
+    },
+    {
+      "icon": "git",
+      "title": "Développements avec <strong>Git</strong>",
+      "text": "<p>Outil indispensable et je pèse mes mots pour le développement de logiciel que ce soit pour l'OpenSource, de l'innerSource ou du perso.</p><p>Ce logiciel de gestion de version OpenSource est utlisé par la plupart des sociétés de la développement.</p>"
+    },
+    {
+      "icon": "webgl",
+      "title": "Développements 3D avec <strong>WebGL</strong>",
+      "text": "<p>Novice dans ce domaine, j'ai tout de même fait pas mal d'expérimentations.</p><p> J'utilise surtout ThreeJS pour me faciliter les développements 3D.</p>"
+    }
+  ]
 }

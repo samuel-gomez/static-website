@@ -28,6 +28,8 @@ class Smoke {
     this.site = $(siteClass);
     this.bubbleContainer = $(bubblesClass);
     this.closeBubble = $(closeBubbleClass);
+    this.setActive = this.setActive.bind(this);
+    this.clearActive = this.clearActive.bind(this);
   }
 
   init() {
@@ -45,21 +47,22 @@ class Smoke {
     if (this.bubbles.length) {
       this.initEventsBubble(this.bubbles);
     }
+
     if (this.closeBubble) {
       this.initEventCloseBubble();
     }
   }
 
   initEventCloseBubble() {
-    this.closeBubble.addEventListener('click', this.clearActive.bind(this), true);
+    this.closeBubble.addEventListener('click', this.clearActive, true);
   }
 
   initEventsBubble(elts) {
-    [].forEach.call(elts, elt => elt.addEventListener('click', e => this.setActive(e), true));
+    [].forEach.call(elts, elt => elt.addEventListener('click', this.setActive, true));
   }
 
-  setActive(e) {
-    const id = e.currentTarget.getAttribute('id');
+  setActive(evt) {
+    const id = evt.currentTarget.getAttribute('id');
     const colorStr = enumBgColors[id][0];
     const color = parseInt(colorStr.replace(/^#/, ''), 16);
     const colorStrLight = enumBgColors[id][1];
@@ -69,10 +72,10 @@ class Smoke {
     [].forEach.call(this.bubbles, elt => {
       if (elt.getAttribute('id') === id) {
         elt.classList.add(bubbleClassInactive);
-        setTimeout(() => {
-          elt.classList.remove(bubbleClassInactive);
-          elt.classList.add(bubbleClassActive);
-        }, 250);
+        elt.removeEventListener('click', this.setActive, true);
+        elt.classList.remove(bubbleClassInactive);
+        elt.classList.add(bubbleClassActive);
+        elt.addEventListener('click', this.clearActive, true);
       } else {
         elt.classList.add(bubbleClassInactive);
       }
@@ -86,6 +89,7 @@ class Smoke {
     [].forEach.call(this.bubbles, elt => {
       elt.classList.remove(bubbleClassActive);
       elt.classList.remove(bubbleClassInactive);
+      elt.addEventListener('click', this.setActive, true);
     });
   }
 

@@ -8,7 +8,7 @@
       height: calc(100% - 60px);
       transition: all 0.5s ease;
       transform: translate3d(-100%, 0, 0);
-      background: $white;
+      /*  background: $white; */
       top: 0;
       margin-top: 60px;
       overflow-x: auto;
@@ -16,7 +16,7 @@
 
     &__list {
       &:not(.tk-menu__list--child) {
-        background: $color-gray-3;
+        /*  background: $color-gray-3; */
         border-bottom: 3px solid $color-gray-2;
       }
       &--child {
@@ -29,9 +29,21 @@
         padding: 1rem 0 1rem 2rem;
         display: block;
         transition: all 0.5s linear;
-        background: $white;
+        /* background: $white; */
+        background: linear-gradient(
+            to right,
+            rgb(255, 255, 255) 0%,
+            rgb(255, 255, 255) 100%
+          )
+          no-repeat;
+        background-position: center 98%;
+        background-size: 0 1px;
+        transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+          0s;
         &:hover {
-          background: $color-action-2;
+          /* background: $color-action-2; */
+          text-decoration: none;
+          background-size: 80% 1px;
         }
       }
       &-text {
@@ -85,7 +97,7 @@
   .#{$prefix} {
     &-menu {
       &__nav {
-        background: inherit;
+        /*  background: inherit; */
         position: relative;
         transform: inherit;
         width: auto;
@@ -95,7 +107,7 @@
       &__list {
         display: flex;
         &:not(.tk-menu__list--child) {
-          background: inherit;
+          /*  background: inherit; */
           border: 0;
         }
       }
@@ -106,7 +118,7 @@
       }
       &__item-link {
         display: inherit;
-        background: inherit;
+        /*  background: inherit; */
         color: $white;
         padding: 0.5rem 1rem;
         font-weight: 200;
