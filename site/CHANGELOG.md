@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](http://github.com/samuel-gomez/compare/v1.1.1...v1.1.2) (2019-09-21)
+
+**Note:** Version bump only for package @wooweb/static-website-sam
+
+
+
+
+
 # [1.1.0](http://github.com/samuel-gomez/compare/v1.0.6...v1.1.0) (2019-06-16)
 
 

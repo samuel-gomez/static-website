@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/static-website-sam",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "Static Website generator",
   "private": true,
   "files": [
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/samuel-gomez#readme",
   "dependencies": {
     "@babel/register": "^7.4.4",
+    "@wooweb/backgroundarticle": "^1.1.0",
     "@wooweb/button": "^1.1.0",
     "@wooweb/content": "^1.1.0",
     "@wooweb/core": "^1.1.0",
@@ -38,7 +39,6 @@
     "@wooweb/img": "^1.1.0",
     "@wooweb/logo": "^1.1.0",
     "@wooweb/title": "^1.1.0",
-    "@wooweb/backgroundarticle": "^1.1.0",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",
