@@ -4,9 +4,9 @@
   "description": "Static Website generator",
   "private": true,
   "files": [
-    "dist/"
+    "test/"
   ],
-  "main": "dist/index.html",
+  "main": "test/index.html",
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
