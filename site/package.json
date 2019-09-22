@@ -10,6 +10,8 @@
   "scripts": {
     "start": "gulp dev",
     "build": "gulp build",
+    "images": "gulp images",
+    "pug": "gulp pug",
     "deploy": "npm run build && serve -s dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "run-s lint:**",
@@ -39,6 +41,7 @@
     "@wooweb/img": "^1.1.0",
     "@wooweb/logo": "^1.1.0",
     "@wooweb/title": "^1.1.0",
+    "@wooweb/articletext": "^1.1.2",
     "gulp": "^4.0.1",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^8.0.0",

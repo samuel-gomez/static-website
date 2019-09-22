@@ -18,10 +18,9 @@ block content
             +BubbleBase()
                 +Title({modifier:'bubble'})
                     | open source
-                +Img({src:`${basedir}${pathImg}opensource.svg`, alt:"open source", modifier:'bubble'})
+                +Img({ src:`${basedir}${pathImg}opensource.svg`, alt:"open source", modifier:'bubble' })
             +ArticleText({modifier:'bubble', title:"L’open Source", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
-        +Icon({id:'cross-gap', modifier:"closeBubble", js: true})
-    -const technos = ['css3', 'html5', 'reactjs', 'javascript', 'nodejs', 'pug','sass','mongodb','angularjs','d3js','git','webgl' ]
-    +Technos({ items: page.technos })
-    section
-        +BackgroundArticle({title: "Samuel", text:"gomez", img:`${basedir}${pathImg}paris-panorama.jpg`})
+        +Icon({ id:'cross-gap', modifier:"closeBubble", js: true })
+    section(class=`${prefix}-home__hero`)
+        -const hero = page.hero
+        +ArticleText({ modifier:'home-react', title:hero.title, text: hero.content, link: hero.link, image: hero.image })

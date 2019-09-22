@@ -4,6 +4,7 @@ import Demo from './components/demo/demo';
 import Smoke from './components/smoke/smoke';
 import Ray from './components/smoke/ray';
 import Technos from './components/technos/index';
+import Scrolling from './components/scroll/scrolling';
 
 const menu = new Menu();
 const tabs = new Tabs('js-tabs');
@@ -12,6 +13,7 @@ const demo = new Demo();
 const smoke = new Smoke();
 const ray = new Ray();
 const technos = new Technos();
+const scrolling = new Scrolling();
 
 document.addEventListener('DOMContentLoaded', () => {
   smoke.init();
@@ -21,4 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
   tabsDemo.init();
   demo.init();
   technos.init();
+  scrolling.init();
 });

@@ -5,6 +5,10 @@ block name
 block vars
     -var id = "home"
     -var lang = "fr"
+    -var logoTitle= 'Samuel Gomez'
+    -var logoSubTitle = 'développeur web'
+    -var logoImg = "samuel-gomez-logo.svg"
+    -var logoAlt = 'Samuel Gomez, Senior Software Engineer'
 
 block functions
     -const {setClassActive, setClass, pugg, pretty} = functions
@@ -52,7 +56,8 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
             block style
     body(id=`${prefix}-${id}-body` class=`${prefix}-body`)
         block menu
-        include ../components/header/header
+        +Header({ basedir, pathImg, link: { href:basedir, title:"Retour à l'accueil"}, logo: { title:logoTitle, subtitle:logoSubTitle, img: logoImg, alt: logoAlt, modifier:'header' }, js: true })
+            block headerlinks
         +Content({modifier: id, js:true})
             block content
         +Footer({js:true})

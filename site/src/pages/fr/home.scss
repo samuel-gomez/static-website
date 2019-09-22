@@ -107,6 +107,73 @@
     right: 5%;
     fill: $white;
   }
+
+  &-article-text {
+    &--home-react {
+      height: 200px;
+      position: relative;
+      background: $white;
+      color: $color-darkgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      &::before {
+        position: absolute;
+        top: -83px;
+        left: 0;
+        content: '';
+        display: block;
+        height: 83px;
+        width: 100%;
+        background: transparent url('./assets/images/home/wave.svg') repeat-x;
+        z-index: -1;
+        background-position-x: 0;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+      }
+      &::after {
+        position: absolute;
+        bottom: -83px;
+        left: 0;
+        content: '';
+        display: block;
+        height: 83px;
+        width: 100%;
+        background: transparent url('./assets/images/home/wave.svg') repeat-x;
+        animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite reverse;
+        transform: rotate(180deg);
+        z-index: -1;
+      }
+      .#{$prefix} {
+        &-article-text {
+          &__content {
+            background: $white;
+            flex-basis: 30%;
+          }
+          &__title {
+            font-size: 3rem;
+            font-weight: 200;
+            letter-spacing: -3px;
+            strong {
+              font-weight: 900;
+            }
+          }
+          &__intro {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            strong {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-img {
+    &--home-react {
+    }
+  }
 }
 
 @keyframes fadein {
@@ -126,5 +193,14 @@
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1600px;
   }
 }

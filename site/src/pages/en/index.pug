@@ -1,4 +1,27 @@
 extends ../../layouts/en/_home
 
 block content
-    | Home page english, it's awesome !!!
+    section(class=`${prefix}-home__bubbles ${prefixjs}-home__bubbles`)
+        +Bubble({js: true, modifier:"uxdesign", id:"uxdesign"})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | ux design
+                +Img({src:`${basedir}${pathImg}uxdesign.svg`, alt: "uxdesign", modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"User Experience", text: `The user experience is the starting point for a quality application. The best application of the world with the latest technologies and in respect of CRAFT practices will end up in the trash if its user experience is disastrous.`})
+        +Bubble({js: true, modifier:"development", id:"development"})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | development
+                +Img({src:`${basedir}${pathImg}developpement-frontend.svg`, alt: "developpement frontend", modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"Web Development", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
+        +Bubble({js: true, modifier:"opensource", id:"opensource"})
+            +BubbleBase()
+                +Title({modifier:'bubble'})
+                    | open source
+                +Img({src:`${basedir}${pathImg}opensource.svg`, alt:"open source", modifier:'bubble'})
+            +ArticleText({modifier:'bubble', title:"L’open Source", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
+        +Icon({id:'cross-gap', modifier:"closeBubble", js: true})
+    -const technos = ['css3', 'html5', 'reactjs', 'javascript', 'nodejs', 'pug','sass','mongodb','angularjs','d3js','git','webgl' ]
+    +Technos({ items: page.technos })
+    section
+        +BackgroundArticle({title: "Samuel", text:"gomez", img:`${basedir}${pathImg}paris-panorama.jpg`})

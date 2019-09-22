@@ -4,10 +4,38 @@
     color: $white;
     border: 0;
     height: $header-height;
+    transition: all 0.2s ease-in-out;
     &__name-link {
       @include hcenterer;
       top: 0;
       text-align: center;
+    }
+    .#{$prefix} {
+      &-logo {
+        &__title {
+          transition: all 0.2s ease-in-out;
+        }
+      }
+      &-img {
+        &--logo {
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+    &--scrolling {
+      background: rgba(0, 0, 0, 0.8);
+      .#{$prefix} {
+        &-logo {
+          &__title {
+            transform: rotateX(90deg);
+          }
+        }
+        &-img {
+          &--logo {
+            transform: scale(0.7) translateY(-23px);
+          }
+        }
+      }
     }
   }
 }

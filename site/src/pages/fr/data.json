@@ -64,5 +64,18 @@
       "title": "Développements 3D avec <strong>WebGL</strong>",
       "text": "<p>Novice dans ce domaine, j'ai tout de même fait pas mal d'expérimentations.</p><p> J'utilise surtout ThreeJS pour me faciliter les développements 3D.</p>"
     }
-  ]
+  ],
+  "hero": {
+    "title": "Développement Front-end avec <strong>ReactJS</strong>",
+    "content": "C'est une <strong>librairie Javascript</strong> qu'on ne présente plus, j'utilise <strong>React</strong> au quotidien au sein de mes projets. <br/>Sa <strong>puissance et sa souplesse</strong> permettent de répondre à tous les besoins des interfaces utilisateurs.",
+    "link": {
+      "label": "Plus d’infos sur ReactJs",
+      "href": "/blog/reactjs",
+      "title": "Plus d’infos sur ReactJs"
+    },
+    "image": {
+      "name": "home/react-framework-hero.png",
+      "alt": "reactjs framework javascript"
+    }
+  }
 }
