@@ -28,7 +28,8 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.1.0"
+    "@wooweb/core": "^1.1.0",
+    "@wooweb/img": "^1.1.0"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
