@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/img",
-  "version": "1.1.0",
+  "version": "1.1.4",
   "description": "Wooweb Image component",
   "private": false,
   "publishConfig": {
@@ -27,7 +27,7 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.1.0"
+    "@wooweb/core": "^1.1.4"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
