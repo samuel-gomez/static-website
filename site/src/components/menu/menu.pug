@@ -4,7 +4,4 @@ mixin Menu({modifier='', activePath='/'})
         +Icon({id:'cross-gap', className:`menu__close`, js:true})
         +Icon({id:'menu-button', className:`menu__open`, js:true})
         nav(class=`${prefix}-menu__nav`)
-            if lang === 'en'
-                +SubMenu({menu: menuEn, activePath})
-            else
-                +SubMenu({menu: menuFr, activePath})
+            +SubMenu({menu: menu[lang], activePath})

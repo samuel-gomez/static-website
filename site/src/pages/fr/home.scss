@@ -1,7 +1,7 @@
 .#{$prefix} {
   &-home {
     &__bubbles {
-      padding: 30vh 0 40vh 0;
+      padding: 30vh 0 22vh 0;
       display: flex;
       align-content: center;
       justify-content: space-evenly;
@@ -170,8 +170,9 @@
       }
     }
   }
-  &-img {
-    &--home-react {
+  &-content {
+    &--home {
+      background: transparent;
     }
   }
 }

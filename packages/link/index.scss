@@ -1,0 +1,34 @@
+@import '@wooweb/core/variables.scss';
+
+.#{$prefix} {
+  &-link {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-azur;
+    padding: 0.8rem 1.2rem 0.8rem 1.2rem;
+    transition: all 0.2s linear;
+    &:not(:disabled) {
+      cursor: pointer;
+    }
+    &__icon {
+      height: 1.2rem;
+      fill: $white;
+    }
+    &__text {
+      margin: 0 0 0 1rem;
+    }
+    &--has-icon-right {
+      .#{$prefix} {
+        &-link {
+          &__icon {
+            order: 1;
+          }
+          &__text {
+            margin: 0 1rem 0 0;
+          }
+        }
+      }
+    }
+  }
+}

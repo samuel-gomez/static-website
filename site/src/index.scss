@@ -18,6 +18,7 @@
 @import '@wooweb/title/index';
 @import '@wooweb/icon/index';
 @import '@wooweb/button/index';
+@import '@wooweb/link/index';
 
 /* Molecules */
 @import '@wooweb/header/index';
@@ -37,11 +38,11 @@
 
 /* Atoms */
 @import './components/more/more';
+@import './components/logo/logo';
 
 /* Molecules */
 @import './components/header/header';
 @import './components/footer/footer';
-@import './components/img/img';
 @import './components/title/title';
 @import './components/menu/menu';
 @import './components/repo/repo';
@@ -52,7 +53,6 @@
 /* Organisms */
 
 /* Layouts */
-@import './components/content/content';
 @import './components/page/page';
 
 /* Pages */

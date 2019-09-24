@@ -1,6 +1,6 @@
-mixin Button({ className='btn', label, icon='', modifier='', js=false })
+mixin Link({ className='link', label, icon='', target="_self", modifier='', js=false, href })
     -const classComponent = setClass(className, modifier, js)
-    button(class=classComponent)
+    a(class=classComponent target=target href=href)
         if(icon !== '')
             +Icon({ id:icon, className:`${prefix}-${className}__icon` })
         span(class=`${prefix}-${className}__text`) #{label}

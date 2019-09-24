@@ -8,5 +8,4 @@ mixin ArticleText({ className = 'article-text',modifier = '', js=false, title, t
             span(class=`${prefix}-${className}__intro`) 
                 | !{text}
             if link.href !== undefined
-                a(class=`${prefix}-${className}__link` href=link.href title=link.title)
-                    | #{link.label}
+                +Link({ label: link.label, href: link.href, title: link.title })

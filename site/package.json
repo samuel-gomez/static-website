@@ -34,6 +34,7 @@
     "@wooweb/articletext": "^1.1.5",
     "@wooweb/backgroundarticle": "^1.1.5",
     "@wooweb/button": "^1.1.5",
+    "@wooweb/link": "^1.1.5",
     "@wooweb/content": "^1.1.5",
     "@wooweb/core": "^1.1.5",
     "@wooweb/footer": "^1.1.5",
