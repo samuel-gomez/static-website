@@ -3,6 +3,40 @@
   "textription": "Ceci est la textription de la page d'accueil.",
   "keywords": "",
   "translations": { "en": "" },
+  "skills": [
+    {
+      "title": "Accessibilité et SEO avec l’HTML 5",
+      "text": "La version 5 de l'HTML apporte  de nouvelles fonctionnalités et une meilleure sémantique  pour l’accessibilité des interfaces et le SEO. Il n’est pas rare de passer par du templating : JSX, PUG, ...",
+      "link": {
+        "href": "/html5-accessibilite",
+        "title": "En savoir plus sur Accessibilité et SEO avec l’HTML 5"
+      }
+    },
+    {
+      "title": "Mise en forme et Animation CSS",
+      "text": "Les CSS3 et CSS4 offrent beaucoup de possibilités si l'on oublie les vieux navigateurs . Son défault est sa permissivité sur le cascading,  SASS avec BEM ou les styles  components  permettent de mieux scoper les composants.",
+      "link": {
+        "href": "/css-style-animation",
+        "title": "En savoir plus sur Mise en forme et Animation CSS"
+      }
+    },
+    {
+      "title": "Le développement Back-end",
+      "text": "Je développe des API avec Nodejs et NestJS. Je les utilisent également pour développer des sites dynamiques. J’utilise MongoDb pour mes bases de données et  graphQL pour faciliter l’interfaçage back-end / Front-end.",
+      "link": {
+        "href": "/backend-nodejs-nestjs",
+        "title": "En savoir plus sur Le développement Back-end"
+      }
+    },
+    {
+      "title": "Intégration continue",
+      "text": "L’intégration continue est un des enjeux majeur pour l’amélioration du TimeToMarket. Et cela implique les développeurs,  nos dévelppements sont compilés, transpilés, testés, minifiés et publiés au travers de  ces outils d’automatisation.",
+      "link": {
+        "href": "/ops-integration-continue",
+        "title": "En savoir plus sur Intégration continue"
+      }
+    }
+  ],
   "technos": [
     {
       "icon": "reactjs",

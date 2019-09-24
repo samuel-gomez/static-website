@@ -24,3 +24,7 @@ block content
     section(class=`${prefix}-home__hero`)
         -const hero = page.hero
         +ArticleText({ modifier:'home-react', title: hero.title, text: hero.content, link: hero.link, image: hero.image })
+    section(class=`${prefix}-home__skills`)
+        -const skills = page.skills
+        each skill in skills
+            +ArticleText({ modifier:'home-skills', title: skill.title, text: skill.text, link: skill.link , image: skill.image })
