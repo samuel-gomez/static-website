@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/button",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Wooweb Button component",
   "private": false,
   "publishConfig": {
@@ -28,8 +28,8 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.1.4",
-    "@wooweb/icon": "^1.1.4"
+    "@wooweb/core": "^1.1.5",
+    "@wooweb/icon": "^1.1.5"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
