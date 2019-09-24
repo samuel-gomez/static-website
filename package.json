@@ -12,7 +12,7 @@
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna version --yes --concurrency 1 --force-publish",
+    "publish": "lerna publish --yes --concurrency 1 --force-publish",
     "create": "lerna create",
     "add": "lerna add",
     "clean": "lerna clean",
