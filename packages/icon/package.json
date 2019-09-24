@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/icon",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Wooweb Icon component for svg structure",
   "private": false,
   "publishConfig": {
@@ -29,7 +29,7 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.2.0"
+    "@wooweb/core": "^1.2.1"
   },
   "peerDependencies": {
     "pug": "^2.0.3"

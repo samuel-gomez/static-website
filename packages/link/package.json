@@ -1,6 +1,6 @@
 {
   "name": "@wooweb/link",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Wooweb Link component",
   "private": false,
   "publishConfig": {
@@ -28,8 +28,8 @@
     "url": "https://github.com/samuel-gomez/static-website/issues"
   },
   "dependencies": {
-    "@wooweb/core": "^1.2.0",
-    "@wooweb/icon": "^1.2.0"
+    "@wooweb/core": "^1.2.1",
+    "@wooweb/icon": "^1.2.1"
   },
   "peerDependencies": {
     "pug": "^2.0.3"
