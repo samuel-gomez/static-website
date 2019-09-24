@@ -15,9 +15,7 @@
       height: 1.2rem;
       fill: $white;
     }
-    &__text {
-      margin: 0 0 0 1rem;
-    }
+
     &--has-icon-right {
       .#{$prefix} {
         &-link {

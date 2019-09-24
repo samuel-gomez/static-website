@@ -1,4 +1,4 @@
-mixin ArticleText({ className = 'article-text',modifier = '', js=false, title, text, id='', link= {}, image= {} })
+mixin ArticleText({ className = 'article-text', modifier = '', js=false, title, text, id='', link= {}, image= {} })
     -const classComponent = setClass(className, modifier, js)
     article(class=classComponent)
         if image.name !== undefined
@@ -8,4 +8,4 @@ mixin ArticleText({ className = 'article-text',modifier = '', js=false, title, t
             span(class=`${prefix}-${className}__intro`) 
                 | !{text}
             if link.href !== undefined
-                +Link({ label: link.label, href: link.href, title: link.title })
+                +Link({ label: link.label, href: link.href, title: link.title, modifier })

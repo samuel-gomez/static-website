@@ -101,7 +101,7 @@
   ],
   "hero": {
     "title": "Développement Front-end avec <strong>ReactJS</strong>",
-    "content": "C'est une <strong>librairie Javascript</strong> qu'on ne présente plus, j'utilise <strong>React</strong> au quotidien au sein de mes projets. <br/>Sa <strong>puissance et sa souplesse</strong> permettent de répondre à tous les besoins des interfaces utilisateurs.",
+    "content": "<p>C'est une <strong>librairie Javascript</strong> qu'on ne présente plus, j'utilise <strong>React</strong> au quotidien au sein de mes projets.</p><p>Sa <strong>puissance et sa souplesse</strong> permettent de répondre à tous les besoins des interfaces utilisateurs.</p>",
     "link": {
       "label": "Plus d’infos sur ReactJs",
       "href": "/blog/reactjs",
