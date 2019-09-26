@@ -19,6 +19,7 @@ class Card3d {
   initTilt() {
     VanillaTilt.init(this.cards, {
       glare: true,
+      scale: 1.1,
     });
   }
 
