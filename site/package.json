@@ -64,7 +64,8 @@
     "lory.js": "^2.5.3",
     "node-fetch": "^2.4.1",
     "normalize-scss": "^7.0.1",
-    "pretty": "^2.0.0"
+    "pretty": "^2.0.0",
+    "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
