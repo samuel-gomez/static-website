@@ -16,6 +16,11 @@
         }
       }
     }
+    &__skills {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 4rem 0;
+    }
   }
   &-ray,
   &-smoke {
@@ -109,6 +114,9 @@
   }
 
   &-article-text {
+    &__content {
+      transform-style: preserve-3d;
+    }
     &--home-react {
       height: 200px;
       position: relative;
@@ -175,7 +183,46 @@
         }
       }
     }
+    &--home-skills {
+      position: relative;
+      background: $white;
+      width: 17%;
+      padding: 7% 1% 3% 1%;
+      border-radius: 20px;
+      color: $white;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      box-shadow: 0 34px 30px 0 rgba(0, 0, 0, 0.5);
+
+      background: rgb(69, 72, 77);
+      background: linear-gradient(
+        to bottom,
+        rgba(69, 72, 77, 1) 0%,
+        rgba(0, 0, 0, 1) 100%
+      );
+
+      /* &::before {
+        content: '';
+        width: 54%;
+        height: 101%;
+        top: -26px;
+        right: 0;
+        position: absolute;
+        background: rgb(255, 76, 106);
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 76, 106, 1) 0%,
+          rgba(255, 146, 10, 1) 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4c6a', endColorstr='#ff920a',GradientType=0 );
+
+        border-radius: 20px;
+        transform: skewY(-160deg) skewX(0deg);
+        z-index: -1;
+      } */
+    }
   }
+
   &-link {
     &--home-react {
       background: $color-redpink;
@@ -186,13 +233,27 @@
       align-self: flex-end;
     }
   }
+
   &-content {
     &--home {
       background: transparent;
     }
   }
+  &-skill__icon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    filter: drop-shadow(0px 44px 20px rgba(0, 0, 0, 0.6));
+    left: 50%;
+    top: 0;
+    transform: translate3d(-50%, -90%, 20px);
+    z-index: 10;
+  }
 }
 
+.js-tilt-glare {
+  border-radius: 20px;
+}
 @keyframes fadein {
   0% {
     opacity: 0;

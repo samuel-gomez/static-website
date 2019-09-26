@@ -10,7 +10,8 @@
       "link": {
         "href": "/html5-accessibilite",
         "title": "En savoir plus sur Accessibilité et SEO avec l’HTML 5"
-      }
+      },
+      "icon": "html5-development"
     },
     {
       "title": "Mise en forme et Animation CSS",
@@ -18,7 +19,8 @@
       "link": {
         "href": "/css-style-animation",
         "title": "En savoir plus sur Mise en forme et Animation CSS"
-      }
+      },
+      "icon": "css-design-development"
     },
     {
       "title": "Le développement Back-end",
@@ -26,7 +28,8 @@
       "link": {
         "href": "/backend-nodejs-nestjs",
         "title": "En savoir plus sur Le développement Back-end"
-      }
+      },
+      "icon": "backend-development"
     },
     {
       "title": "Intégration continue",
@@ -34,7 +37,8 @@
       "link": {
         "href": "/ops-integration-continue",
         "title": "En savoir plus sur Intégration continue"
-      }
+      },
+      "icon": "continous-integration"
     }
   ],
   "technos": [

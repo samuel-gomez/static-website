@@ -27,4 +27,6 @@ block content
     section(class=`${prefix}-home__skills`)
         -const skills = page.skills
         each skill in skills
-            +ArticleText({ modifier:'home-skills', title: skill.title, text: skill.text, link: skill.link , image: skill.image })
+            +ArticleText({ modifier:'home-skills', title: skill.title, text: skill.text, link: skill.link, js: true })
+               if(skill.icon)
+                    +Icon({ id:skill.icon, className:'skill__icon' })

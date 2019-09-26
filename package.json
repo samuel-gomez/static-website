@@ -21,7 +21,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "lerna": "^3.13.4"
+    "lerna": "^3.13.4",
+    "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {
     "jest": "^24.8.0"

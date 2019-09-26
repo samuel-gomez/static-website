@@ -9,3 +9,4 @@ mixin ArticleText({ className = 'article-text', modifier = '', js=false, title, 
                 | !{text}
             if link.href !== undefined
                 +Link({ label: link.label, href: link.href, title: link.title, modifier })
+            block
