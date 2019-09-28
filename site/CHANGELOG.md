@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](http://github.com/samuel-gomez/compare/v1.2.1...v1.3.0) (2019-09-28)
+
+
+### Features
+
+* **home:** 3d card tilt ([a2ec650](http://github.com/samuel-gomez/commit/a2ec650))
+* **home:** better parallax ([542f64a](http://github.com/samuel-gomez/commit/542f64a))
+* **home:** skills content ([6e3eecc](http://github.com/samuel-gomez/commit/6e3eecc))
+
+
+
+
+
 ## [1.2.1](http://github.com/samuel-gomez/compare/v1.2.0...v1.2.1) (2019-09-24)
 
 **Note:** Version bump only for package @wooweb/static-website-sam
