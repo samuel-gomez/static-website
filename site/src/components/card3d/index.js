@@ -3,10 +3,28 @@ import VanillaTilt from 'vanilla-tilt';
 import $$ from '../../commons/js/selectorAll';
 
 const classCard3d = `${prefixjs}-card3d`;
+const defaultOptions = {
+  reverse: false,
+  max: 35,
+  startX: 0,
+  startY: 0,
+  perspective: 1000,
+  scale: 1.1,
+  speed: 300,
+  transition: true,
+  axis: null,
+  reset: true,
+  easing: 'cubic-bezier(.03,.98,.52,.99)',
+  glare: false,
+  'max-glare': 0.2,
+  'glare-prerender': false,
+  'mouse-event-element': null,
+};
 
 class Card3d {
-  constructor(selector) {
+  constructor(selector, customOptions) {
     this.cards = $$(document)(`.${selector !== '' ? selector : classCard3d}`);
+    this.options = { ...defaultOptions, ...customOptions };
   }
 
   init() {
@@ -17,10 +35,7 @@ class Card3d {
   }
 
   initTilt() {
-    VanillaTilt.init(this.cards, {
-      glare: true,
-      scale: 1.1,
-    });
+    VanillaTilt.init(this.cards, this.options);
   }
 
   isNotExitingElement() {

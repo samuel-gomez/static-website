@@ -1,7 +1,7 @@
-mixin Footer({modifier = '', js=false})
+mixin Footer({modifier = '', js=false, organisation="Samuel Gomez"})
 	-const classComponent = setClass('footer', modifier, js)
 	-const year = new Date().getFullYear();
 	footer(class=classComponent)
 		span(class=`${prefix}-footer__privacy`)
-			| Privacy Policy © #{year} AXA All Rights Reserved
+			| Privacy Policy © #{year} #{organisation} All Rights Reserved
 		block
