@@ -1,0 +1,14 @@
+{
+  "title": "Développement logiciel avec ReactJs",
+  "description": "Reactjs est un outil très puissant pour développer des logiciels professionnel orienté métier.",
+  "keywords": "reactjs, logiciel reactjs, développment reactjs, développeur reactjs, reactjs lille",
+  "translations": { "en": "reactjs-software-development" },
+  "hero": {
+    "title": "Développement Front-end avec <strong>ReactJS</strong>",
+    "content": "<p>C'est une <strong>librairie Javascript</strong> qu'on ne présente plus, j'utilise <strong>React</strong> au quotidien au sein de mes projets.</p><p>Sa <strong>puissance et sa souplesse</strong> permettent de répondre à tous les besoins des interfaces utilisateurs.</p>",
+    "image": {
+      "name": "home/react-framework-hero.png",
+      "alt": "reactjs framework javascript"
+    }
+  }
+}

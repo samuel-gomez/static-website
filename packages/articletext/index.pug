@@ -4,9 +4,11 @@ mixin ArticleText({ className = 'article-text', modifier = '', js=false, title, 
         if image.name !== undefined
             +Img({src:`${basedir}${pathImg}${image.name}`, alt: image.alt, modifier, className: `${prefix}-${className}__img` })
         div(class=`${prefix}-${className}__content`) 
-            h2(class=`${prefix}-${className}__title`) !{title}
+            h2(class=`${prefix}-${className}__title`)
+                a(href= link.href title=title)
+                    | !{title}
             span(class=`${prefix}-${className}__intro`) 
                 | !{text}
-            if link.href !== undefined
+            if link.href !== undefined && link.label !== undefined
                 +Link({ label: link.label, href: link.href, title: link.title, modifier })
             block

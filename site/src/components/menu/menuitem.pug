@@ -1,5 +1,5 @@
 mixin MenuItem({href, label, childsmenu, activePath, title=''})
-	li(class=`${prefix}-menu__item${activePath === href ? ` ${prefix}-menu__item--active` : ''}`)
+	li(class=`${prefix}-menu__item${activePath === `.${href}` ? ` ${prefix}-menu__item--active` : ''}`)
 		if(href)
 			a(href=`/${lang}${href}` title=title class=`${prefix}-menu__item-link`)
 				|	#{label}

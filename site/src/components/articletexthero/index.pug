@@ -1,0 +1,3 @@
+mixin ArticleTextHero({ hero })
+    section(class=`${prefix}-hero`)
+        +ArticleText({ modifier:'hero', title: hero.title, text: hero.content, link: hero.link, image: hero.image })

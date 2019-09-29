@@ -2,12 +2,14 @@
   &-html {
     font-size: 1rem;
     font-family: $font-family-base;
-    color: $white;
+    color: $black;
     letter-spacing: 0.01em;
     min-width: $width-mobile;
   }
 }
-a {
+a,
+a:focus,
+a:hover {
   color: $white;
 }
 .#{$prefix} {

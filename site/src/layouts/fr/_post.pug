@@ -12,10 +12,8 @@ block meta
     -var metaKeywords = article.keywords
 
 block headerlinks
-    +Translate({translations: article.translations})
-
-block menu
     +Menu({activePath: article.link})
+    +Translate({translations: article.translations})
 
 block content
     div(class=`${prefix}-markdown`)

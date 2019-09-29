@@ -1,12 +1,12 @@
 {
   "title": "Page d'accueil du Samuel Gomez",
-  "textription": "Ceci est la textription de la page d'accueil.",
+  "description": "Ceci est la description de la page d'accueil.",
   "keywords": "",
   "translations": { "en": "" },
   "skills": [
     {
       "title": "Accessibilité et SEO avec l’HTML 5",
-      "text": "La version 5 de l'HTML apporte  de nouvelles fonctionnalités et une meilleure sémantique  pour l’accessibilité des interfaces et le SEO. Il n’est pas rare de passer par du templating : JSX, PUG, ...",
+      "text": "La version 5 de l'HTML apporte de nouvelles fonctionnalités et une meilleure sémantique pour l’accessibilité des interfaces et le SEO. Il n’est pas rare de passer par du templating : JSX, PUG, TWIG, EJS, ...",
       "link": {
         "label": "HTML 5",
         "href": "/html5-accessibilite",
@@ -16,7 +16,7 @@
     },
     {
       "title": "Mise en forme et Animation CSS",
-      "text": "Les CSS3 et CSS4 offrent beaucoup de possibilités si l'on oublie les vieux navigateurs . Son défault est sa permissivité sur le cascading,  SASS avec BEM ou les styles  components  permettent de mieux scoper les composants.",
+      "text": "Les CSS3 et CSS4 offrent beaucoup de possibilités si l'on oublie les vieux navigateurs. Son défault est sa permissivité sur le cascading, SASS avec BEM ou les styles components permettent de mieux scoper les composants.",
       "link": {
         "label": "CSS & Animations",
         "href": "/css-style-animation",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Le développement Back-end",
-      "text": "Je développe des API avec Nodejs et NestJS. Je les utilisent également pour développer des sites dynamiques. J’utilise MongoDb pour mes bases de données et  graphQL pour faciliter l’interfaçage back-end / Front-end.",
+      "text": "Je développe des API avec Nodejs et NestJS. Je les utilisent également pour développer des sites dynamiques. J’utilise MongoDb pour mes bases de données et graphQL pour faciliter l’interfaçage back-end / Front-end.",
       "link": {
         "label": "Développement Back-end",
         "href": "/backend-nodejs-nestjs",
@@ -36,7 +36,7 @@
     },
     {
       "title": "Intégration continue",
-      "text": "L’intégration continue est un des enjeux majeur pour l’amélioration du TimeToMarket. Et cela implique les développeurs,  nos dévelppements sont compilés, transpilés, testés, minifiés et publiés au travers de  ces outils d’automatisation.",
+      "text": "L’intégration continue est un des enjeux majeur pour l’amélioration du TimeToMarket. Et cela implique les développeurs, nos développements sont compilés, transpilés, testés, minifiés et publiés au travers de ces outils d’automatisation.",
       "link": {
         "label": "Intégration continue",
         "href": "/ops-integration-continue",
@@ -112,7 +112,7 @@
     "content": "<p>C'est une <strong>librairie Javascript</strong> qu'on ne présente plus, j'utilise <strong>React</strong> au quotidien au sein de mes projets.</p><p>Sa <strong>puissance et sa souplesse</strong> permettent de répondre à tous les besoins des interfaces utilisateurs.</p>",
     "link": {
       "label": "Plus d’infos sur ReactJs",
-      "href": "/blog/reactjs",
+      "href": "/fr/developpement-logicel-avec-reactjs",
       "title": "Plus d’infos sur ReactJs"
     },
     "image": {

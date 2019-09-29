@@ -4,7 +4,6 @@ append name
     -var name = "blog"
 
 block content
-    h1 mon Blog en français
+    h1(class=`${prefix}-${id}__title`) Blog personnel de Samuel Gomez
     each article in articles[lang]
-        h2.af_title #{article.title}
-        +Link({ label: 'En savoir plus >', href: article.link})
+        +ArticleText({ modifier:'blog', title: article.title, text: article.intro, link: { href: article.link } })

@@ -1,0 +1,48 @@
+.#{$prefix} {
+  &-content {
+    &--blog {
+      padding: 2%;
+    }
+  }
+  &-blog {
+    &__title {
+      font-size: em(30);
+      font-weight: 200;
+      padding: 2rem 0;
+      letter-spacing: -2px;
+    }
+  }
+  &-article-text {
+    &--blog {
+      .#{$prefix}-article-text {
+        &__title {
+          font-size: em(24);
+          font-weight: 900;
+          padding: 1rem 0;
+          letter-spacing: -1px;
+          a {
+            color: $color-redpink;
+            transition: all 0.5s linear;
+            background: linear-gradient(
+                to right,
+                rgb(0, 0, 0) 0%,
+                rgb(0, 0, 0) 100%
+              )
+              no-repeat;
+            background-position: 0 100%;
+            background-size: 0 1px;
+            transition: background-size 0.25s
+              cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+            &:hover {
+              text-decoration: none;
+              background-size: 100% 1px;
+            }
+          }
+        }
+        &__intro {
+          display: block;
+        }
+      }
+    }
+  }
+}

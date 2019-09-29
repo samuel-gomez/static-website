@@ -29,7 +29,6 @@
         padding: 1rem 0 1rem 2rem;
         display: block;
         transition: all 0.5s linear;
-        /* background: $white; */
         background: linear-gradient(
             to right,
             rgb(255, 255, 255) 0%,
@@ -41,7 +40,6 @@
         transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86)
           0s;
         &:hover {
-          /* background: $color-action-2; */
           text-decoration: none;
           background-size: 80% 1px;
         }
@@ -53,7 +51,6 @@
         font-weight: 500;
       }
       &--active {
-        background: $color-flamingo-light;
         .#{$prefix}-menu__item-link {
           color: $color-flamingo;
         }

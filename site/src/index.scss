@@ -42,13 +42,13 @@
 
 /* Molecules */
 @import './components/header/header';
-@import './components/footer/footer';
 @import './components/title/title';
 @import './components/menu/menu';
 @import './components/repo/repo';
 @import './components/encart/encart';
 @import './components/bubble/bubble';
 @import './components/technos/index';
+@import './components/articletexthero/index';
 
 /* Organisms */
 
@@ -57,3 +57,4 @@
 
 /* Pages */
 @import './pages/fr/home';
+@import './pages/fr/blog/index';
