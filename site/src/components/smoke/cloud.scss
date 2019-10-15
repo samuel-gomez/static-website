@@ -1,0 +1,62 @@
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+  @return $randomNum;
+}
+
+@mixin smoker() {
+  position: absolute;
+  transform-origin: center;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.#{$prefix} {
+  &-clouds {
+    width: 100vw;
+    height: 100vh;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    position: fixed;
+  }
+  &-cloud {
+    @include smoker;
+    @for $i from 0 through 5 {
+      @for $j from 0 through 5 {
+        $top: $j * randomNum(18, 22) * 1%;
+        $left: $i * randomNum(18, 22) * 1%;
+        $size: 400;
+        $duration: randomNum(10, 20) + 20;
+        $randomScaleIn: 2 + random(10) / 100;
+        $randomScaleOut: 2 + random(10) / 100;
+        $randomDegIn: random(360);
+        $randomDegOut: $randomDegIn + 360;
+        $randomZ: randomNum(-10, 300);
+        &:nth-child(#{$j+($i * 5)}) {
+          top: $top;
+          left: $left;
+          width: #{$size}px;
+          height: #{$size}px;
+          transform: rotate(0deg) translate3d(0, 0, 0);
+          animation: turn#{$j +
+            ($i * 5)}
+            #{$duration}s
+            infinite
+            linear
+            forwards;
+        }
+
+        @keyframes turn#{$j + ($i * 5)} {
+          from {
+            transform: rotate(#{$randomDegIn}deg)
+              translate3d(0, 0, #{$randomZ}px) scale($randomScaleIn);
+          }
+          to {
+            transform: rotate(#{$randomDegOut}deg)
+              translate3d(0, 0, #{$randomZ}px) scale($randomScaleOut);
+          }
+        }
+      }
+    }
+  }
+}

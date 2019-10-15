@@ -1,4 +1,4 @@
-extends ../../layouts/fr/_home
+extends ../../layouts/fr/_canvas
 
 block content
     section(class=`${prefix}-home__bubbles ${prefixjs}-home__bubbles`)
@@ -20,9 +20,8 @@ block content
                     | open source
                 +Img({ src:`${basedir}${pathImg}opensource.svg`, alt:"open source", modifier:'bubble' })
             +ArticleText({ modifier:'bubble', title:"L’open Source", text: `L’expérience utilisateur est le point de départ d’un application de qualité. La meilleure application du monde avec les dernières technologies et dans le respect des pratiques CRAFT finira à la poubelle si son expérience utilisateur est désastreuse.`})
-        +Icon({ path:`${basedir}assets/sprite/`, id:'cross-gap', modifier:"closeBubble", js: true })
-    section(class=`${prefix}-hero`)
-        +ArticleText({ modifier:'hero hero-home', title: page.hero.title, text: page.hero.content, link: page.hero.link, image: page.hero.image })
+        +Icon({ id:'cross-gap', modifier:"closeBubble", js: true })
+    +ArticleTextHero({ hero: page.hero})
     section(class=`${prefix}-home__skills`)
         -const skills = page.skills
         each skill in skills

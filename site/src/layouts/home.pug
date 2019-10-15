@@ -53,7 +53,6 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
             block style
     body(id=`${prefix}-${id}-body` class=`${prefix}-body ${prefixjs}-body`)
         div(class=`${prefix}-smoke ${prefixjs}-smoke`)
-        div(class=`${prefix}-ray ${prefixjs}-ray`)
         div(class=`${prefix}-site ${prefixjs}-site ${prefix}-site--${id}`)
             block menu
             +Header({ basedir, pathImg, link: { href:basedir, title:"Retour à l'accueil"}, logo: { title:logoTitle, subtitle:logoSubTitle, img: logoImg, alt: logoAlt, modifier:'header' }, js: true })
@@ -61,10 +60,6 @@ html(lang=lang id=`${prefix}-${id}-html` class=`${prefix}-html`)
             +Content({modifier: id, js:true})
                 block content
             +Footer({js:true})
-            div(style="display:none")
-                include ../assets/sprite/sprite.svg
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js')
         script(src=`${basedir}bundle.js`)
         block scriptPage
         block template

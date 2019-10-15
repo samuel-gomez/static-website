@@ -8,8 +8,8 @@
   ],
   "main": "test/index.html",
   "scripts": {
-    "start": "gulp dev",
-    "build": "gulp build",
+    "start": "set NODE_ENV=development && gulp dev",
+    "build": "set NODE_ENV=production && gulp build",
     "images": "gulp images",
     "pug": "gulp pug",
     "deploy": "npm run build && serve -s dist",
@@ -65,6 +65,7 @@
     "node-fetch": "^2.6.0",
     "normalize-scss": "^7.0.1",
     "pretty": "^2.0.0",
+    "three": "^0.109.0",
     "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {

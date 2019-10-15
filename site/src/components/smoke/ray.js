@@ -1,4 +1,19 @@
 /* eslint-disable no-undef */
+import {
+  Object3D,
+  MeshPhysicalMaterial,
+  DoubleSide,
+  CircleGeometry,
+  Mesh,
+  WebGLRenderer,
+  Scene,
+  PerspectiveCamera,
+  AmbientLight,
+  SpotLight,
+  PointLight,
+  RectAreaLight,
+  PCFSoftShadowMap,
+} from 'three';
 import { prefixjs } from '@wooweb/core/config.json';
 import $ from '../../commons/js/selector';
 
@@ -7,17 +22,17 @@ const classRay = `${prefixjs}-ray`;
 const mathRandom = (num = 1) => -Math.random() * num + Math.random() * num;
 
 const generateParticle = (num, amp = 2) => {
-  const particularGroup = new THREE.Object3D();
-  const gmaterial = new THREE.MeshPhysicalMaterial({
+  const particularGroup = new Object3D();
+  const gmaterial = new MeshPhysicalMaterial({
     color: 0xffffff,
-    side: THREE.DoubleSide,
+    side: DoubleSide,
   });
 
-  const gparticular = new THREE.CircleGeometry(0.2, 5);
+  const gparticular = new CircleGeometry(0.2, 5);
 
   for (let i = 1; i < num; i += 1) {
     const pscale = 0.001 + Math.abs(mathRandom(0.03));
-    const particular = new THREE.Mesh(gparticular, gmaterial);
+    const particular = new Mesh(gparticular, gmaterial);
 
     particular.position.set(mathRandom(amp), mathRandom(amp), mathRandom(amp));
     particular.rotation.set(mathRandom(), mathRandom(), mathRandom());
@@ -52,40 +67,40 @@ class Ray {
   }
 
   initRayScene() {
-    this.rendererR = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.rendererR = new WebGLRenderer({ antialias: true, alpha: true });
     this.rendererR.setSize(window.innerWidth, window.innerHeight);
     this.rendererR.setClearColor(0x000000, 0);
     this.rendererR.shadowMap.enabled = false;
-    this.rendererR.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.rendererR.shadowMap.type = PCFSoftShadowMap;
     this.rendererR.shadowMap.needsUpdate = true;
-    this.sceneR = new THREE.Scene();
+    this.sceneR = new Scene();
   }
 
   initRayCamera() {
-    this.cameraR = new THREE.PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 500);
+    this.cameraR = new PerspectiveCamera(35, window.innerWidth / window.innerHeight, 1, 500);
     this.cameraR.position.set(0, 0, 3);
     this.sceneR.add(this.cameraR);
   }
 
   setParticules() {
-    const sceneGroup = new THREE.Object3D();
+    const sceneGroup = new Object3D();
     this.particularGroup = generateParticle(100, 2);
     sceneGroup.add(this.particularGroup);
     this.sceneR.add(sceneGroup);
   }
 
   setSceneRay() {
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+    const ambientLight = new AmbientLight(0xffffff, 0.1);
     this.sceneR.add(ambientLight);
 
-    const light = new THREE.SpotLight(0xffffff, 3);
+    const light = new SpotLight(0xffffff, 3);
     light.position.set(5, 5, 2);
     light.castShadow = true;
     light.shadow.mapSize.width = 10000;
     light.shadow.mapSize.height = light.shadow.mapSize.width;
     light.penumbra = 0.5;
 
-    const lightBack = new THREE.PointLight(0x0fffff, 1);
+    const lightBack = new PointLight(0x0fffff, 1);
     lightBack.position.set(0, -3, -1);
 
     this.sceneR.add(light);
@@ -93,7 +108,7 @@ class Ray {
 
     const rectSize = 2;
     const intensity = 100;
-    const rectLight = new THREE.RectAreaLight(0x0fffff, intensity, rectSize, rectSize);
+    const rectLight = new RectAreaLight(0x0fffff, intensity, rectSize, rectSize);
     rectLight.position.set(0, 0, 1);
     rectLight.lookAt(0, 0, 0);
     this.sceneR.add(rectLight);

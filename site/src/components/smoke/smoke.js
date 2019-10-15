@@ -1,5 +1,18 @@
 /* eslint-disable arrow-parens */
 /* eslint-disable no-undef */
+import {
+  Clock,
+  WebGLRenderer,
+  Scene,
+  PerspectiveCamera,
+  PlaneGeometry,
+  TextureLoader,
+  MeshLambertMaterial,
+  Mesh,
+  DirectionalLight,
+  AdditiveBlending,
+  ImageUtils,
+} from 'three';
 import { prefix, prefixjs, pathImg } from '@wooweb/core/config.json';
 import $ from '../../commons/js/selector';
 import $$ from '../../commons/js/selectorAll';
@@ -103,57 +116,55 @@ class Smoke {
   }
 
   initSmokeScene() {
-    this.clock = new THREE.Clock();
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.clock = new Clock();
+    this.renderer = new WebGLRenderer({ antialias: true, alpha: true });
     this.renderer.setClearColor(0x000000, 0.5);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.scene = new THREE.Scene();
+    this.scene = new Scene();
   }
 
   initCamera() {
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+    this.camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     this.camera.position.z = 1000;
     this.scene.add(this.camera);
   }
 
   addText() {
-    const textGeo = new THREE.PlaneGeometry(400, 300);
-    THREE.ImageUtils.crossOrigin = '';
-    const textTexture = new THREE.TextureLoader().load(
-      `${basePath}/${pathImg}/samuel-gomez-logo.png`,
-    );
-    const textMaterial = new THREE.MeshLambertMaterial({
+    const textGeo = new PlaneGeometry(400, 300);
+    ImageUtils.crossOrigin = '';
+    const textTexture = new TextureLoader().load(`${basePath}/${pathImg}/samuel-gomez-logo.png`);
+    const textMaterial = new MeshLambertMaterial({
       color: 0xffffff,
       opacity: 0.08,
       map: textTexture,
       transparent: true,
-      blending: THREE.AdditiveBlending,
+      blending: AdditiveBlending,
     });
-    const text = new THREE.Mesh(textGeo, textMaterial);
+    const text = new Mesh(textGeo, textMaterial);
     text.position.z = 800;
     text.width = window.innerWidth;
     this.scene.add(text);
   }
 
   addLight({ color = 0xffffff, opacity = 0.5, x = -1, y = 0, z = 1 }) {
-    const light = new THREE.DirectionalLight(color, opacity);
+    const light = new DirectionalLight(color, opacity);
     light.position.set(x, y, z);
     this.scene.add(light);
   }
 
   setSmoke({ color }) {
     this.smokeParticles = [];
-    const smokeTexture = new THREE.TextureLoader().load(`${basePath}/${pathImg}/Smoke-Element.png`);
-    const smokeMaterial = new THREE.MeshLambertMaterial({
+    const smokeTexture = new TextureLoader().load(`${basePath}/${pathImg}/Smoke-Element.png`);
+    const smokeMaterial = new MeshLambertMaterial({
       color,
       map: smokeTexture,
       transparent: true,
     });
-    const smokeGeo = new THREE.PlaneGeometry(300, 300);
+    const smokeGeo = new PlaneGeometry(600, 600);
     this.smokeParticles = [];
 
-    for (let p = 0; p < 150; p += 1) {
-      const particle = new THREE.Mesh(smokeGeo, smokeMaterial);
+    for (let p = 0; p < 20; p += 1) {
+      const particle = new Mesh(smokeGeo, smokeMaterial);
       particle.position.set(
         Math.random() * 500 - 250,
         Math.random() * 500 - 250,

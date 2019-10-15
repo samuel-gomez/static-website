@@ -5,7 +5,7 @@ import $$ from '../../commons/js/selectorAll';
 const classCard3d = `${prefixjs}-card3d`;
 const defaultOptions = {
   reverse: false,
-  max: 35,
+  max: 5,
   startX: 0,
   startY: 0,
   perspective: 1000,

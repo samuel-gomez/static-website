@@ -1,0 +1,15 @@
+extends ../canvas
+
+append vars
+    -var lang = "fr"
+    -basedir = `../${basedir}`
+    -var page = pages[lang].find(page => page.id === '')
+
+block meta
+    -var metaTitle = page.title
+    -var metaDescription = page.description
+    -var metaKeywords = page.keywords
+
+block headerlinks
+    +Menu({activePath: page.link})
+    +Translate({translations:page.translations})

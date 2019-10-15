@@ -1,4 +1,4 @@
-mixin Icon({id, modifier="", className='icon', js=false })
+mixin Icon({id, modifier="", className='icon', js=false, path = './assets/sprite/', name="sprite.svg" })
 	-const classComponent = `${setClass(className, modifier, js)}`
 	svg(class=classComponent viewbox="0 0 36 36" width=36 height=36  data-id=`${id !== '' ? id : false}`)
-		use(xlink:href=`#${id}`)
+		use(xlink:href=`${path}${name}#${id}`)
