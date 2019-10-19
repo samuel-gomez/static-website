@@ -1,0 +1,12 @@
+extends ../../../layouts/fr/_page
+
+append name
+    -var name = "competences"
+
+block content
+    section(class=`${prefix}-home__skills`)
+        -const skills = page.skills
+        each skill in skills
+            +ArticleText({ modifier:'home-skills', title: skill.title, text: skill.text, link: skill.link, js: true })
+               if(skill.icon)
+                    +Icon({ path:`${basedir}assets/sprite/`, id:skill.icon, className:'skill__icon' })
